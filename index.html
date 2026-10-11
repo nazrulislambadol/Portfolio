@@ -17,7 +17,8 @@
         extend: {
           colors: {
             brandDark: '#121212',
-            brandCard: '#1a1a1a',
+            brandCard: '#181818',
+            brandCardHover: '#202020',
             brandBorder: '#282828',
             brandLime: '#CCFF00',
             brandLimeHover: '#b5e600',
@@ -31,13 +32,20 @@
     }
   </script>
   <style>
-    /* Smooth animated spinning badge */
     @keyframes spinSlow {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
     .spin-slow {
       animation: spinSlow 12s linear infinite;
+    }
+    /* Pulse glow */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.15); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
     }
   </style>
 </head>
@@ -52,10 +60,11 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wider uppercase text-gray-400">
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold tracking-wider uppercase text-gray-400">
         <a href="#home" class="text-white hover:text-brandLime transition">Home</a>
         <a href="#work" class="hover:text-brandLime transition">Portfolio</a>
         <a href="#services" class="hover:text-brandLime transition">Services</a>
+        <a href="#pricing" class="hover:text-brandLime transition">Packages</a>
         <a href="#about" class="hover:text-brandLime transition">About</a>
         <a href="#reviews" class="hover:text-brandLime transition">Reviews</a>
         <a href="#contact" class="hover:text-brandLime transition">Contact</a>
@@ -97,13 +106,13 @@
             </span>
           </a>
 
-          <a href="#contact" class="text-sm font-semibold text-gray-300 hover:text-brandLime underline decoration-2 underline-offset-4 tracking-wide uppercase transition">
-            Hire for projects &rarr;
+          <a href="#pricing" class="text-sm font-semibold text-gray-300 hover:text-brandLime underline decoration-2 underline-offset-4 tracking-wide uppercase transition">
+            See Pricing & Packages &rarr;
           </a>
         </div>
       </div>
 
-      <!-- Right Visual (Hero Image matching reference style) -->
+      <!-- Right Visual (Hero Image) -->
       <div class="lg:col-span-5 relative flex justify-center items-center">
         <!-- Floating Stamp Badge -->
         <div class="absolute -top-6 left-0 sm:left-4 z-20 bg-brandDark/90 backdrop-blur-md p-2 rounded-full border border-brandBorder shadow-xl">
@@ -127,14 +136,12 @@
           </p>
         </div>
 
-        <!-- Main Photo with Colored Offset Background Block -->
+        <!-- Main Photo -->
         <div class="relative w-full max-w-md">
-          <!-- Offset Neon Accent Shape -->
           <div class="absolute inset-0 bg-brandLime/90 rounded-3xl translate-x-3 translate-y-3 sm:translate-x-5 sm:translate-y-5 -rotate-1"></div>
           
-          <!-- Image Box -->
           <div class="relative rounded-3xl overflow-hidden border-2 border-brandBorder bg-brandCard shadow-2xl z-10 aspect-[4/5]">
-            <!-- আপনার ছবি: একই ফোল্ডারে profile.jpg নামে রাখুন -->
+            <!-- ছবি ফাইল: profile.jpg -->
             <img src="profile.jpg" alt="Nazrul Islam" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition duration-500">
           </div>
         </div>
@@ -183,7 +190,6 @@
     <!-- Portfolio 3-Column Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <!-- Card 1 -->
       <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
         <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
           <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Logo & Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -199,7 +205,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
         <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
           <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Packaging & Label" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -215,7 +220,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
         <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
           <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Social Media Assets" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -238,7 +242,6 @@
   <section id="services" class="max-w-7xl mx-auto px-6 py-20 border-t border-brandBorder">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
       
-      <!-- Big Lime Card on Left -->
       <div class="lg:col-span-4 bg-brandLime text-black p-10 rounded-3xl flex flex-col justify-between">
         <div class="text-4xl font-extrabold">↗</div>
         <div>
@@ -247,45 +250,38 @@
         </div>
       </div>
 
-      <!-- Service 2x3 Grid on Right -->
       <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
         
-        <!-- Service 1 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">✦</div>
           <h4 class="text-lg font-bold text-white mb-1">Logo Design</h4>
           <p class="text-sm text-gray-400">Memorable, versatile, and vector-crafted logos that identify your core identity.</p>
         </div>
 
-        <!-- Service 2 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📖</div>
           <h4 class="text-lg font-bold text-white mb-1">Brand Guideline / Book</h4>
           <p class="text-sm text-gray-400">Complete style manuals specifying typography, color codes, and usage rules.</p>
         </div>
 
-        <!-- Service 3 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📱</div>
           <h4 class="text-lg font-bold text-white mb-1">Social Media Post Design</h4>
           <p class="text-sm text-gray-400">Eye-catching social ads, carousels, and banners customized for maximum engagement.</p>
         </div>
 
-        <!-- Service 4 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📦</div>
           <h4 class="text-lg font-bold text-white mb-1">Packaging Design</h4>
           <p class="text-sm text-gray-400">Die-line accurate box, pouch, and container packaging ready for direct printing.</p>
         </div>
 
-        <!-- Service 5 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📑</div>
           <h4 class="text-lg font-bold text-white mb-1">Book Formatting & Cover</h4>
           <p class="text-sm text-gray-400">Professional layout typography and book covers designed for Amazon KDP & print.</p>
         </div>
 
-        <!-- Service 6 -->
         <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
           <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">🖨️</div>
           <h4 class="text-lg font-bold text-white mb-1">Print and Digital Assets</h4>
@@ -297,11 +293,200 @@
     </div>
   </section>
 
-  <!-- ==================== 6. ABOUT ME ==================== -->
+  <!-- ==================== 6. MY PACKAGES (PRICING) ==================== -->
+  <section id="pricing" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+        Tailored Design <span class="text-brandLime">Pricing</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base mt-4">
+        Transparent, deliverable-focused packages crafted for businesses, publishers, and startups across Bangladesh and worldwide.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
+        <span class="bg-brandLime text-black px-5 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider cursor-default shadow-[0_0_15px_rgba(204,255,0,0.25)]">
+          Logo & Branding
+        </span>
+        <span class="bg-brandCard border border-brandBorder text-gray-300 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 transition">
+          Packaging Design
+        </span>
+        <span class="bg-brandCard border border-brandBorder text-gray-300 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 transition">
+          Book Cover
+        </span>
+        <span class="bg-brandCard border border-brandBorder text-gray-300 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 transition">
+          Social Media Design
+        </span>
+      </div>
+    </div>
+
+    <!-- 3 Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
+      
+      <!-- Basic -->
+      <div class="bg-brandCard border border-brandBorder rounded-3xl p-8 flex flex-col justify-between hover:border-brandLime/40 transition duration-300">
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Basic</h3>
+          <p class="text-xs text-gray-400 mt-1">For small businesses & startups</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-black text-white">TK 4,500</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+            </div>
+          </div>
+
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-gray-400 mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>2 Unique initial logo concepts</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Primary and secondary logo variations</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>High-resolution PNG, JPG & transparent files</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Vector master files (AI, EPS, SVG)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Color codes (HEX, RGB, CMYK)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>3 Iteration rounds and refinements</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20your%20Basic%20Design%20Package." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#222222] text-white border border-brandBorder hover:border-brandLime hover:text-brandLime py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Standard -->
+      <div class="relative bg-brandCard border-2 border-brandLime rounded-3xl p-8 flex flex-col justify-between shadow-[0_0_35px_rgba(204,255,0,0.15)] scale-[1.02]">
+        <span class="absolute -top-3.5 right-8 bg-brandLime text-black font-extrabold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md">
+          Most Popular
+        </span>
+
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Standard</h3>
+          <p class="text-xs text-brandLime/90 mt-1">For growing brands seeking modern identity</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-black text-brandLime">TK 7,500</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+            </div>
+          </div>
+
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-brandLime mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>3 Bespoke logo concepts & icon system</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Mini Brand Guideline (Typography & Color system)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Stationery kit (Business card & Letterhead design)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Social media kit (Profile avatars + 2 Banner covers)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Realistic 3D presentation mockups</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>5 Iteration rounds & complete vector source files</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20your%20Standard%20Design%20Package." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brandLime text-black hover:bg-brandLimeHover py-4 rounded-xl text-xs font-extrabold uppercase tracking-wider transition shadow-lg">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Premium -->
+      <div class="bg-brandCard border border-brandBorder rounded-3xl p-8 flex flex-col justify-between hover:border-brandLime/40 transition duration-300">
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Premium</h3>
+          <p class="text-xs text-gray-400 mt-1">For complete brand identity & growth</p>
+
+          <div class="my-6">
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-black text-white">TK 12,000</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+            </div>
+          </div>
+
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-gray-400 mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>4 Bespoke logo concepts & complete symbol system</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Complete Brand Guidelines Book (Comprehensive PDF)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Complete Stationery kit (Card, letterhead, envelope)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Full Social media kit (Avatars, cover banners, post templates)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Packaging / Merchandise label design mockup</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-brandLime font-bold">✓</span>
+                <span>Full commercial rights & unlimited priority refinements</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20your%20Premium%20Design%20Package." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#222222] text-white border border-brandBorder hover:border-brandLime hover:text-brandLime py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 7. ABOUT ME ==================== -->
   <section id="about" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
-      <!-- Left: Story & Signature -->
       <div class="lg:col-span-5 space-y-6">
         <span class="text-xs uppercase tracking-widest text-brandLime font-bold">About Me</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
@@ -311,14 +496,12 @@
           I am Nazrul Islam, a dedicated Graphic Designer committed to delivering exceptional aesthetics. I help businesses clarify their vision into distinctive visual assets with precise attention to layout, typography, and color harmony.
         </p>
 
-        <!-- Signature -->
         <div class="pt-2">
           <p class="font-handwriting text-4xl text-brandLime">Nazrul Islam</p>
           <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Founder / Senior Designer</p>
         </div>
       </div>
 
-      <!-- Center: Small Portrait Cutout -->
       <div class="lg:col-span-3 flex justify-center">
         <div class="relative w-56 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-brandBorder bg-brandCard">
           <div class="absolute inset-0 bg-brandLime/20 mix-blend-color"></div>
@@ -326,9 +509,7 @@
         </div>
       </div>
 
-      <!-- Right: Skill Progress Bars -->
       <div class="lg:col-span-4 space-y-5">
-        
         <div>
           <div class="flex justify-between text-xs font-bold uppercase mb-1">
             <span class="text-white">Logo & Brand Identity</span>
@@ -375,13 +556,12 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
           </a>
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== 7. HAPPY CLIENT REVIEWS (NEW SECTION) ==================== -->
+  <!-- ==================== 8. CLIENT REVIEWS ==================== -->
   <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
       <div>
@@ -395,13 +575,10 @@
       </p>
     </div>
 
-    <!-- Review 3-Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <!-- Review 1 -->
       <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
-          <!-- Stars & Quote -->
           <div class="flex items-center justify-between mb-4">
             <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
             <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
@@ -421,10 +598,8 @@
         </div>
       </div>
 
-      <!-- Review 2 -->
       <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
-          <!-- Stars & Quote -->
           <div class="flex items-center justify-between mb-4">
             <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
             <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
@@ -444,10 +619,8 @@
         </div>
       </div>
 
-      <!-- Review 3 -->
       <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
-          <!-- Stars & Quote -->
           <div class="flex items-center justify-between mb-4">
             <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
             <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
@@ -470,7 +643,7 @@
     </div>
   </section>
 
-  <!-- ==================== 8. TRUSTED BY / CLIENTS STRIP ==================== -->
+  <!-- ==================== 9. TRUSTED BY STRIP ==================== -->
   <section class="py-12 border-y border-brandBorder bg-[#141414]">
     <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
       <span class="text-brandLime font-black tracking-normal">TRUSTED BY :</span>
@@ -482,9 +655,8 @@
     </div>
   </section>
 
-  <!-- ==================== 9. FOOTER CTA & CONTACT ==================== -->
-  <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-12">
-    <!-- Big Banner CTA -->
+  <!-- ==================== 10. FOOTER CTA & CONTACT ==================== -->
+  <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     <div class="bg-brandLime text-black rounded-3xl p-8 sm:p-14 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
       <div>
         <span class="text-xs uppercase font-extrabold tracking-widest bg-black text-brandLime px-3 py-1 rounded-md inline-block mb-3">
@@ -500,16 +672,12 @@
       </a>
     </div>
 
-    <!-- Contact Info Columns -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-brandBorder pb-14 text-sm">
-      
-      <!-- Brand & Note -->
       <div>
         <div class="text-3xl font-black text-white mb-3">N<span class="text-brandLime">.</span></div>
         <p class="text-gray-400">Available for worldwide freelance projects and creative brand consultations.</p>
       </div>
 
-      <!-- Direct Contact Details -->
       <div>
         <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">GET IN TOUCH</h5>
         <ul class="space-y-2.5 text-gray-300">
@@ -529,7 +697,6 @@
         </ul>
       </div>
 
-      <!-- Social Media -->
       <div>
         <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">FOLLOW ME</h5>
         <div class="flex flex-wrap gap-3">
@@ -539,10 +706,8 @@
           <a href="https://wa.me/8801571149561" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">WhatsApp</a>
         </div>
       </div>
-
     </div>
 
-    <!-- Copyright -->
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
       <p>© 2026 Nazrul Islam. All rights reserved.</p>
       <div class="flex gap-6">
@@ -551,6 +716,165 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== ★ 11. FLOATING AI CHAT WIDGET & POPUP ★ ==================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- CHAT POPUP WINDOW (Hidden by default, opens on click) -->
+    <div id="chatBoxModal" class="hidden mb-4 w-[330px] sm:w-[370px] bg-[#161616] border border-brandBorder rounded-3xl shadow-[0_15px_50px_rgba(0,0,0,0.8)] overflow-hidden transition-all duration-300">
+      
+      <!-- Chat Header -->
+      <div class="bg-[#1f1f1f] p-4 border-b border-brandBorder flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative w-10 h-10 rounded-full bg-emerald-950/80 border border-emerald-500/50 flex items-center justify-center text-emerald-400">
+            <!-- Bot Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 01-6.23-.693L4.2 13.9"/></svg>
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#161616]"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h4 class="text-white font-bold text-sm">Nazrul Islam</h4>
+              <span class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-extrabold px-1.5 py-0.2 rounded">AI Active</span>
+            </div>
+            <p class="text-[11px] text-gray-400">Typically replies instantly</p>
+          </div>
+        </div>
+        <!-- Close Button -->
+        <button onclick="toggleChatWidget()" class="text-gray-400 hover:text-white p-1 rounded-lg hover:bg-neutral-800 transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Chat Body / Messages Area -->
+      <div class="p-4 space-y-3.5 max-h-[320px] overflow-y-auto text-xs">
+        
+        <!-- Bot Initial Message -->
+        <div class="flex items-start gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs flex-shrink-0">
+            🤖
+          </div>
+          <div class="bg-[#222222] border border-brandBorder p-3 rounded-2xl rounded-tl-none text-gray-200 space-y-1.5 leading-relaxed">
+            <p>👋 Hello! Welcome to my design portfolio.</p>
+            <p>How can I assist your brand today? You can choose a quick topic or send a direct quote request:</p>
+          </div>
+        </div>
+
+        <!-- Quick Action Prompt Chips -->
+        <div class="flex flex-wrap gap-1.5 pl-9">
+          <button onclick="setChatMessage('I need a new Logo & Brand Identity for my business.')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
+            ✨ Logo Design
+          </button>
+          <button onclick="setChatMessage('I need Packaging or Label design for my product.')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
+            📦 Packaging
+          </button>
+          <button onclick="setChatMessage('What are your design package prices and timeframe?')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
+            💰 Pricing & Quote
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Chat Input Form -->
+      <form onsubmit="handleSendChat(event)" class="p-3 bg-[#1a1a1a] border-t border-brandBorder flex items-center gap-2">
+        <input 
+          id="chatInputMessage" 
+          type="text" 
+          placeholder="Write your project details..." 
+          class="flex-1 bg-[#222222] border border-brandBorder text-white text-xs rounded-xl px-3.5 py-2.5 outline-none focus:border-brandLime transition placeholder-gray-500"
+          required
+        />
+        <button 
+          type="submit" 
+          class="bg-brandLime hover:bg-brandLimeHover text-black p-2.5 rounded-xl transition flex items-center justify-center"
+          title="Send via WhatsApp"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+        </button>
+      </form>
+
+    </div>
+
+    <!-- TRIGGER PILL BUTTON (Matching the reference design exactly) -->
+    <div class="relative group cursor-pointer" onclick="toggleChatWidget()">
+      
+      <!-- Top-right Green Indicator Dot (Matching reference) -->
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-brandDark rounded-full z-10 pulse-glow"></span>
+
+      <!-- Main Pill Container -->
+      <div class="bg-[#181818]/95 backdrop-blur-md border border-brandBorder group-hover:border-brandLime/60 rounded-full py-2 px-3 sm:px-4 flex items-center gap-3 shadow-[0_10px_35px_rgba(0,0,0,0.7)] transition-all duration-300 transform group-hover:scale-[1.02]">
+        
+        <!-- Left Circular Bot Icon Badge with Green Dot -->
+        <div class="relative w-10 h-10 rounded-full bg-emerald-950/70 border border-emerald-500/40 flex items-center justify-center flex-shrink-0">
+          <!-- Robot Icon -->
+          <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+            <circle cx="12" cy="5" r="2"></circle>
+            <path d="M12 7v4"></path>
+            <line x1="8" y1="16" x2="8" y2="16"></line>
+            <line x1="16" y1="16" x2="16" y2="16"></line>
+          </svg>
+          <!-- Active Dot on Icon -->
+          <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#181818] rounded-full"></span>
+        </div>
+
+        <!-- Center Text Content -->
+        <div class="flex flex-col pr-1">
+          <div class="flex items-center gap-2">
+            <span class="text-white font-extrabold text-xs sm:text-sm tracking-tight whitespace-nowrap">
+              Chat with Nazrul
+            </span>
+            <!-- AI Active Badge -->
+            <span class="bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 text-[10px] font-extrabold px-1.5 py-0.5 rounded-md tracking-wide">
+              AI Active
+            </span>
+          </div>
+          <!-- Subtext -->
+          <span class="text-gray-400 text-[11px] font-medium leading-none mt-0.5">
+            24/7 Sales & Quotes
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== JAVASCRIPT FOR CHAT FUNCTIONALITY ==================== -->
+  <script>
+    // Toggle popup chat window
+    function toggleChatWidget() {
+      const modal = document.getElementById('chatBoxModal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        document.getElementById('chatInputMessage').focus();
+      }
+    }
+
+    // Set message into input box from chips
+    function setChatMessage(text) {
+      const input = document.getElementById('chatInputMessage');
+      input.value = text;
+      input.focus();
+    }
+
+    // Handle form submit -> Redirect to WhatsApp with the typed message
+    function handleSendChat(event) {
+      event.preventDefault();
+      const input = document.getElementById('chatInputMessage');
+      const message = input.value.trim();
+      if (!message) return;
+
+      const phoneNumber = "8801571149561";
+      const encodedMsg = encodeURIComponent("Hello Nazrul,\n" + message);
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
+
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, '_blank');
+      input.value = '';
+      toggleChatWidget();
+    }
+  </script>
 
 </body>
 </html>
