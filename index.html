@@ -219,16 +219,17 @@
     </div>
   </section>
 
-  <!-- ==================== 4. SELECTED WORK ==================== -->
+<!-- ==================== 4. SELECTED WORK (WITH POPUP GALLERY) ==================== -->
   <section id="work" class="max-w-7xl mx-auto px-6 py-24">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
       <div>
         <h2 class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
           Selected <span class="text-brandLime">Work</span>
         </h2>
+        <p class="text-xs text-gray-400 mt-2">Click on any project to view full case study & multiple designs</p>
       </div>
       <a href="https://behance.net" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold uppercase text-brandLime hover:underline tracking-wider">
-        View All Projects 
+        View All on Behance 
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
       </a>
     </div>
@@ -236,14 +237,18 @@
     <!-- Portfolio 3-Column Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
-          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Logo & Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <!-- Card 1: Brand Identity -->
+      <div onclick="openProjectModal('brand')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+          </div>
         </div>
         <div class="p-6 flex items-center justify-between">
           <div>
             <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
-            <p class="text-sm text-gray-400">Logo & Visual System</p>
+            <p class="text-sm text-gray-400">Logo, Styleguide & Visuals</p>
           </div>
           <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
             ↗
@@ -251,9 +256,13 @@
         </div>
       </div>
 
-      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Packaging & Label" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <!-- Card 2: Packaging Design -->
+      <div onclick="openProjectModal('packaging')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+          </div>
         </div>
         <div class="p-6 flex items-center justify-between">
           <div>
@@ -266,9 +275,13 @@
         </div>
       </div>
 
-      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
-          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Social Media Assets" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+      <!-- Card 3: Social Media Kit -->
+      <div onclick="openProjectModal('social')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Social Media Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+          </div>
         </div>
         <div class="p-6 flex items-center justify-between">
           <div>
@@ -283,6 +296,115 @@
 
     </div>
   </section>
+
+  <!-- ==================== PROJECT SHOWCASE MODAL / POPUP GALLERY ==================== -->
+  <div id="projectModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative bg-[#161616] border border-brandBorder rounded-3xl max-w-4xl w-full my-auto overflow-hidden shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="sticky top-0 bg-[#161616]/95 backdrop-blur-md border-b border-brandBorder p-6 flex items-center justify-between z-10">
+        <div>
+          <span id="modalCategory" class="text-brandLime text-xs font-bold uppercase tracking-widest">Category</span>
+          <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Project Title</h3>
+        </div>
+        <button onclick="closeProjectModal()" class="w-10 h-10 rounded-full bg-[#222222] hover:bg-brandLime hover:text-black text-gray-300 flex items-center justify-center text-xl transition font-bold">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body (Multiple Images & Description) -->
+      <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
+        <p id="modalDesc" class="text-gray-300 text-sm leading-relaxed max-w-2xl">
+          Project description details here.
+        </p>
+
+        <!-- Dynamic Image Gallery Grid -->
+        <div id="modalImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <!-- Images will be inserted here dynamically -->
+        </div>
+
+        <!-- Hire for this service CTA -->
+        <div class="pt-6 border-t border-brandBorder flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-gray-400">Want similar designs for your brand?</p>
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="bg-brandLime text-black font-extrabold text-xs uppercase px-6 py-3 rounded-xl hover:bg-brandLimeHover transition">
+            Get A Quote For This ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript to Handle Gallery Data & Modal -->
+  <script>
+    // আপনার প্রতি ক্যাটাগরির একাধিক প্রজেক্ট ডিজাইনের ডাটা
+    const projectGalleryData = {
+      brand: {
+        category: "Logo & Brand Identity",
+        title: "Modern Brand Identity System",
+        description: "A complete identity project featuring bespoke logos, minimalist stationery sets, color standards, and visual guidelines created for a high-growth brand.",
+        images: [
+          "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1000&q=80"
+        ]
+      },
+      packaging: {
+        category: "Product & Packaging",
+        title: "Premium Packaging & Label Box",
+        description: "Die-line accurate box, pouch, and container packaging mockups designed with vibrant typography and print-ready finishes.",
+        images: [
+          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80"
+        ]
+      },
+      social: {
+        category: "Social Media Campaign",
+        title: "High-Converting Ad Creatives & Carousels",
+        description: "Engaging social media templates, promotional banners, and Instagram carousel layouts built to increase CTR and brand awareness.",
+        images: [
+          "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1000&q=80",
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1000&q=80"
+        ]
+      }
+    };
+
+    function openProjectModal(key) {
+      const data = projectGalleryData[key];
+      if (!data) return;
+
+      document.getElementById('modalCategory').innerText = data.category;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDesc').innerText = data.description;
+
+      const grid = document.getElementById('modalImagesGrid');
+      grid.innerHTML = '';
+
+      data.images.forEach(imgUrl => {
+        const div = document.createElement('div');
+        div.className = "rounded-xl overflow-hidden border border-brandBorder bg-black";
+        div.innerHTML = `<img src="${imgUrl}" class="w-full h-56 sm:h-64 object-cover hover:scale-105 transition duration-300" alt="Design showcase">`;
+        grid.appendChild(div);
+      });
+
+      const modal = document.getElementById('projectModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Stop background scroll
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto'; // Enable scroll
+    }
+  </script>
 
   <!-- ==================== 5. SERVICES ==================== -->
   <section id="services" class="max-w-7xl mx-auto px-6 py-20 border-t border-brandBorder">
