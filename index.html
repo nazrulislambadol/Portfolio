@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nazrul Islam | Professional Graphic Designer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#121212',
+            brandCard: '#1a1a1a',
+            brandBorder: '#282828',
+            brandLime: '#CCFF00',
+            brandLimeHover: '#b5e600',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            handwriting: ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth animated spinning badge */
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spin-slow {
+      animation: spinSlow 12s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-brandDark text-gray-200 font-sans selection:bg-brandLime selection:text-black antialiased">
+
+  <!-- ==================== 1. NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-brandBorder">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-3xl font-black tracking-tighter text-white">
+        N<span class="text-brandLime">.</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wider uppercase text-gray-400">
+        <a href="#home" class="text-white hover:text-brandLime transition">Home</a>
+        <a href="#work" class="hover:text-brandLime transition">Portfolio</a>
+        <a href="#services" class="hover:text-brandLime transition">Services</a>
+        <a href="#about" class="hover:text-brandLime transition">About</a>
+        <a href="#reviews" class="hover:text-brandLime transition">Reviews</a>
+        <a href="#contact" class="hover:text-brandLime transition">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="https://wa.me/8801571149561" target="_blank" class="inline-flex items-center gap-2 bg-brandLime text-black font-bold text-sm px-6 py-3 rounded-full hover:bg-brandLimeHover transition transform hover:-translate-y-0.5">
+        LET'S TALK
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section id="home" class="max-w-7xl mx-auto px-6 pt-12 pb-20 overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-xs uppercase tracking-[0.25em] text-brandLime font-extrabold bg-brandLime/10 border border-brandLime/20 px-3.5 py-1.5 rounded-full inline-block">
+          Creative Graphic Designer
+        </span>
+        
+        <h1 class="text-5xl sm:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+          I'M A <br>
+          <span class="text-brandLime underline decoration-4 underline-offset-8">GRAPHIC & BRAND</span> <br>
+          DESIGNER
+        </h1>
+
+        <p class="text-gray-400 text-lg max-w-xl font-normal leading-relaxed pt-2">
+          Hi, I am <strong class="text-white">Nazrul Islam</strong>. I create modern, bold, and high-impact brand identities that help businesses stand out and make a lasting impression in the market.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-6 pt-4">
+          <a href="#work" class="inline-flex items-center gap-3 bg-brandLime text-black font-bold px-7 py-4 rounded-full hover:bg-brandLimeHover transition transform hover:-translate-y-0.5 shadow-[0_0_25px_rgba(204,255,0,0.3)]">
+            VIEW MY WORK
+            <span class="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </span>
+          </a>
+
+          <a href="#contact" class="text-sm font-semibold text-gray-300 hover:text-brandLime underline decoration-2 underline-offset-4 tracking-wide uppercase transition">
+            Hire for projects &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual (Hero Image matching reference style) -->
+      <div class="lg:col-span-5 relative flex justify-center items-center">
+        <!-- Floating Stamp Badge -->
+        <div class="absolute -top-6 left-0 sm:left-4 z-20 bg-brandDark/90 backdrop-blur-md p-2 rounded-full border border-brandBorder shadow-xl">
+          <div class="relative w-28 h-28 flex items-center justify-center">
+            <svg class="spin-slow w-full h-full" viewBox="0 0 100 100">
+              <path id="circlePath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none"/>
+              <text font-size="8.5" font-weight="bold" fill="#CCFF00" letter-spacing="2">
+                <textPath href="#circlePath">AVAILABLE FOR FREELANCE • BRAND • DESIGN •</textPath>
+              </text>
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="w-2.5 h-2.5 bg-brandLime rounded-full"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Handwritten Accent Note -->
+        <div class="absolute -right-4 top-12 z-20 hidden sm:block text-right">
+          <p class="font-handwriting text-3xl text-brandLime leading-tight rotate-12">
+            Design.<br>Build.<br>Create.
+          </p>
+        </div>
+
+        <!-- Main Photo with Colored Offset Background Block -->
+        <div class="relative w-full max-w-md">
+          <!-- Offset Neon Accent Shape -->
+          <div class="absolute inset-0 bg-brandLime/90 rounded-3xl translate-x-3 translate-y-3 sm:translate-x-5 sm:translate-y-5 -rotate-1"></div>
+          
+          <!-- Image Box -->
+          <div class="relative rounded-3xl overflow-hidden border-2 border-brandBorder bg-brandCard shadow-2xl z-10 aspect-[4/5]">
+            <!-- আপনার ছবি: একই ফোল্ডারে profile.jpg নামে রাখুন -->
+            <img src="profile.jpg" alt="Nazrul Islam" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition duration-500">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 3. STATS STRIP ==================== -->
+  <section class="border-y border-brandBorder bg-[#161616]">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="space-y-1">
+        <h3 class="text-4xl sm:text-5xl font-black text-brandLime">5+</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Years of Experience</p>
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-4xl sm:text-5xl font-black text-brandLime">120+</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Projects Completed</p>
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-4xl sm:text-5xl font-black text-brandLime">60+</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Happy Clients</p>
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-4xl sm:text-5xl font-black text-brandLime">100%</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Satisfaction Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. SELECTED WORK ==================== -->
+  <section id="work" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
+          Selected <span class="text-brandLime">Work</span>
+        </h2>
+      </div>
+      <a href="https://behance.net" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold uppercase text-brandLime hover:underline tracking-wider">
+        View All Projects 
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      </a>
+    </div>
+
+    <!-- Portfolio 3-Column Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Logo & Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
+            <p class="text-sm text-gray-400">Logo & Visual System</p>
+          </div>
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+            ↗
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Packaging & Label" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">PACKAGING DESIGN</h4>
+            <p class="text-sm text-gray-400">Box, Label & 3D Mockups</p>
+          </div>
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+            ↗
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Social Media Assets" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">SOCIAL MEDIA KIT</h4>
+            <p class="text-sm text-gray-400">High-converting Ad Creatives</p>
+          </div>
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+            ↗
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 5. SERVICES ==================== -->
+  <section id="services" class="max-w-7xl mx-auto px-6 py-20 border-t border-brandBorder">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Big Lime Card on Left -->
+      <div class="lg:col-span-4 bg-brandLime text-black p-10 rounded-3xl flex flex-col justify-between">
+        <div class="text-4xl font-extrabold">↗</div>
+        <div>
+          <h2 class="text-5xl font-black uppercase tracking-tight leading-none mb-3">SERVICES</h2>
+          <p class="text-black/80 font-medium text-sm">Tailored visual solutions built to turn casual viewers into loyal customers.</p>
+        </div>
+      </div>
+
+      <!-- Service 2x3 Grid on Right -->
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Service 1 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">✦</div>
+          <h4 class="text-lg font-bold text-white mb-1">Logo Design</h4>
+          <p class="text-sm text-gray-400">Memorable, versatile, and vector-crafted logos that identify your core identity.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📖</div>
+          <h4 class="text-lg font-bold text-white mb-1">Brand Guideline / Book</h4>
+          <p class="text-sm text-gray-400">Complete style manuals specifying typography, color codes, and usage rules.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📱</div>
+          <h4 class="text-lg font-bold text-white mb-1">Social Media Post Design</h4>
+          <p class="text-sm text-gray-400">Eye-catching social ads, carousels, and banners customized for maximum engagement.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📦</div>
+          <h4 class="text-lg font-bold text-white mb-1">Packaging Design</h4>
+          <p class="text-sm text-gray-400">Die-line accurate box, pouch, and container packaging ready for direct printing.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📑</div>
+          <h4 class="text-lg font-bold text-white mb-1">Book Formatting & Cover</h4>
+          <p class="text-sm text-gray-400">Professional layout typography and book covers designed for Amazon KDP & print.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
+          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">🖨️</div>
+          <h4 class="text-lg font-bold text-white mb-1">Print and Digital Assets</h4>
+          <p class="text-sm text-gray-400">Brochures, flyers, business cards, billboard hoardings, and web banners.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 6. ABOUT ME ==================== -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left: Story & Signature -->
+      <div class="lg:col-span-5 space-y-6">
+        <span class="text-xs uppercase tracking-widest text-brandLime font-bold">About Me</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+          DESIGN IS NOT JUST MY PROFESSION, IT'S MY <span class="text-brandLime">PASSION.</span>
+        </h2>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          I am Nazrul Islam, a dedicated Graphic Designer committed to delivering exceptional aesthetics. I help businesses clarify their vision into distinctive visual assets with precise attention to layout, typography, and color harmony.
+        </p>
+
+        <!-- Signature -->
+        <div class="pt-2">
+          <p class="font-handwriting text-4xl text-brandLime">Nazrul Islam</p>
+          <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Founder / Senior Designer</p>
+        </div>
+      </div>
+
+      <!-- Center: Small Portrait Cutout -->
+      <div class="lg:col-span-3 flex justify-center">
+        <div class="relative w-56 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-brandBorder bg-brandCard">
+          <div class="absolute inset-0 bg-brandLime/20 mix-blend-color"></div>
+          <img src="profile.jpg" alt="Nazrul Islam" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Right: Skill Progress Bars -->
+      <div class="lg:col-span-4 space-y-5">
+        
+        <div>
+          <div class="flex justify-between text-xs font-bold uppercase mb-1">
+            <span class="text-white">Logo & Brand Identity</span>
+            <span class="text-brandLime">95%</span>
+          </div>
+          <div class="w-full h-2 bg-brandCard rounded-full overflow-hidden border border-brandBorder">
+            <div class="h-full bg-brandLime rounded-full" style="width: 95%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold uppercase mb-1">
+            <span class="text-white">Social Media Creatives</span>
+            <span class="text-brandLime">92%</span>
+          </div>
+          <div class="w-full h-2 bg-brandCard rounded-full overflow-hidden border border-brandBorder">
+            <div class="h-full bg-brandLime rounded-full" style="width: 92%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold uppercase mb-1">
+            <span class="text-white">Packaging & Label</span>
+            <span class="text-brandLime">88%</span>
+          </div>
+          <div class="w-full h-2 bg-brandCard rounded-full overflow-hidden border border-brandBorder">
+            <div class="h-full bg-brandLime rounded-full" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold uppercase mb-1">
+            <span class="text-white">Print & Digital Assets</span>
+            <span class="text-brandLime">90%</span>
+          </div>
+          <div class="w-full h-2 bg-brandCard rounded-full overflow-hidden border border-brandBorder">
+            <div class="h-full bg-brandLime rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a href="#" class="inline-flex items-center gap-2 border-2 border-brandLime text-brandLime hover:bg-brandLime hover:text-black font-bold text-xs uppercase px-6 py-3 rounded-xl transition duration-300">
+            DOWNLOAD RESUME
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 7. CLIENT REVIEWS (NEW SECTION) ==================== -->
+  <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div>
+        <span class="text-xs uppercase tracking-widest text-brandLime font-bold mb-2 inline-block">Testimonials</span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
+          Client <span class="text-brandLime">Reviews</span>
+        </h2>
+      </div>
+      <p class="text-sm text-gray-400 max-w-sm">
+        What founders and global clients say about working with me on their brand design.
+      </p>
+    </div>
+
+    <!-- Review 3-Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Stars & Quote -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Nazrul designed our complete brand identity book and logo. His attention to typography and color harmony transformed our business image. Highly recommended!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
+            EH
+          </div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Ethan Hayes</h5>
+            <p class="text-xs text-gray-500">Founder, BrightMind Agency</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Stars & Quote -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "The packaging design for our skincare line was absolutely world-class. The 3D mockups and print-ready files saved us so much time and money during production."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
+            SL
+          </div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Sarah Jenkins</h5>
+            <p class="text-xs text-gray-500">Product Manager, Nexora</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Stars & Quote -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Very fast communication and extreme creativity. Our social media ad creatives saw a 40% jump in click-through rates after Nazrul revamped our visual style."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
+            MK
+          </div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Michael K.</h5>
+            <p class="text-xs text-gray-500">Marketing Lead, PixelForge</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 8. TRUSTED BY / CLIENTS STRIP ==================== -->
+  <section class="py-12 border-y border-brandBorder bg-[#141414]">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
+      <span class="text-brandLime font-black tracking-normal">TRUSTED BY :</span>
+      <span class="hover:text-white transition">TechNova</span>
+      <span class="hover:text-white transition">BrightMind</span>
+      <span class="hover:text-white transition">PixelForge</span>
+      <span class="hover:text-white transition">Nexora</span>
+      <span class="hover:text-white transition">Volt Creative</span>
+    </div>
+  </section>
+
+  <!-- ==================== 9. FOOTER CTA & CONTACT ==================== -->
+  <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+    <!-- Big Banner CTA -->
+    <div class="bg-brandLime text-black rounded-3xl p-8 sm:p-14 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div>
+        <span class="text-xs uppercase font-extrabold tracking-widest bg-black text-brandLime px-3 py-1 rounded-md inline-block mb-3">
+          Let's Collaborate
+        </span>
+        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+          LET'S CREATE <br> SOMETHING GREAT TOGETHER.
+        </h2>
+      </div>
+
+      <a href="https://wa.me/8801571149561" target="_blank" class="w-20 h-20 rounded-full bg-black text-brandLime hover:bg-neutral-900 flex items-center justify-center text-3xl font-black transform hover:rotate-45 transition duration-300 flex-shrink-0">
+        ↗
+      </a>
+    </div>
+
+    <!-- Contact Info Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-brandBorder pb-14 text-sm">
+      
+      <!-- Brand & Note -->
+      <div>
+        <div class="text-3xl font-black text-white mb-3">N<span class="text-brandLime">.</span></div>
+        <p class="text-gray-400">Available for worldwide freelance projects and creative brand consultations.</p>
+      </div>
+
+      <!-- Direct Contact Details -->
+      <div>
+        <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">GET IN TOUCH</h5>
+        <ul class="space-y-2.5 text-gray-300">
+          <li>
+            <a href="tel:01571149561" class="hover:text-brandLime transition flex items-center gap-2">
+              📞 01571149561
+            </a>
+          </li>
+          <li>
+            <a href="mailto:nazrulislambadol17@gmail.com" class="hover:text-brandLime transition flex items-center gap-2">
+              ✉️ nazrulislambadol17@gmail.com
+            </a>
+          </li>
+          <li class="flex items-center gap-2 text-gray-400">
+            📍 Dhaka, Bangladesh
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">FOLLOW ME</h5>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://behance.net" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">Behance</a>
+          <a href="https://dribbble.com" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">Dribbble</a>
+          <a href="https://linkedin.com" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">LinkedIn</a>
+          <a href="https://wa.me/8801571149561" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <p>© 2026 Nazrul Islam. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-300">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
