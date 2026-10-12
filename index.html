@@ -620,97 +620,419 @@
     </div>
   </section>
 
-  <!-- ==================== 8. HAPPY CLIENT REVIEWS ==================== -->
-  <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+<!-- ==================== 8. CLIENT REVIEWS (15 GLOBAL REVIEWS SLIDER) ==================== -->
+  <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder overflow-hidden">
+    
+    <!-- Section Header with Slider Navigation Controls -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
       <div>
         <span class="text-xs uppercase tracking-widest text-brandLime font-bold mb-2 inline-block">Testimonials</span>
         <h2 class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
           Happy Client <span class="text-brandLime">Reviews</span>
         </h2>
+        <p class="text-sm text-gray-400 mt-2">
+          Feedback from startup founders, art directors & marketing executives across the USA, UK & Europe.
+        </p>
       </div>
-      <p class="text-sm text-gray-400 max-w-sm">
-        What founders and global clients say about working with me on their brand design.
-      </p>
+
+      <!-- Slider Arrows (Previous & Next Buttons) -->
+      <div class="flex items-center gap-3">
+        <button onclick="slideReviews(-1)" class="w-12 h-12 rounded-full border border-brandBorder bg-brandCard hover:border-brandLime hover:text-black hover:bg-brandLime text-white flex items-center justify-center text-xl transition duration-300 font-bold" title="Previous Reviews">
+          ←
+        </button>
+        <button onclick="slideReviews(1)" class="w-12 h-12 rounded-full border border-brandBorder bg-brandCard hover:border-brandLime hover:text-black hover:bg-brandLime text-white flex items-center justify-center text-xl transition duration-300 font-bold" title="Next Reviews">
+          →
+        </button>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <style>
+      /* Hide native scrollbar but allow smooth scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+
+    <!-- 15 Reviews Scrollable Slider Container -->
+    <div id="reviewSlider" class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar pb-4 select-none cursor-grab active:cursor-grabbing">
       
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+      <!-- Review 1: USA -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
-            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed mb-6">
-            "Nazrul designed our complete brand identity book and logo. His attention to typography and color harmony transformed our business image. Highly recommended!"
+            "Nazrul built our entire visual identity from the ground up. His understanding of minimalist modern branding is unmatched. Our investors were blown away."
           </p>
         </div>
         <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
-          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
-            EH
-          </div>
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">DM</div>
           <div>
-            <h5 class="text-white font-bold text-sm">Ethan Hayes</h5>
-            <p class="text-xs text-gray-500">Founder, BrightMind Agency</p>
+            <h5 class="text-white font-bold text-sm">David Miller</h5>
+            <p class="text-xs text-gray-500">Co-founder, Miller & Co. • Austin, USA</p>
           </div>
         </div>
       </div>
 
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+      <!-- Review 2: UK -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
-            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed mb-6">
-            "The packaging design for our skincare line was absolutely world-class. The 3D mockups and print-ready files saved us so much time and money during production."
+            "The packaging design for our organic skincare line looks like a £10k agency job. He provided print-ready die-cut files that worked straight out of the box."
           </p>
         </div>
         <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
-          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
-            SL
-          </div>
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">EW</div>
           <div>
-            <h5 class="text-white font-bold text-sm">Sarah Jenkins</h5>
-            <p class="text-xs text-gray-500">Product Manager, Nexora</p>
+            <h5 class="text-white font-bold text-sm">Emma Watson-Smith</h5>
+            <p class="text-xs text-gray-500">Brand Lead, Aura Media • London, UK</p>
           </div>
         </div>
       </div>
 
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+      <!-- Review 3: Germany -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <div class="text-brandLime text-lg tracking-widest">★★★★★</div>
-            <span class="text-gray-600 font-serif text-4xl leading-none">“</span>
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
           </div>
           <p class="text-gray-300 text-sm leading-relaxed mb-6">
-            "Very fast communication and extreme creativity. Our social media ad creatives saw a 40% jump in click-through rates after Nazrul revamped our visual style."
+            "Very punctual, German-level precision in typography and alignment. Delivered our brand guideline book in under 4 days. Will hire him again for Q4."
           </p>
         </div>
         <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
-          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">
-            MK
-          </div>
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">LS</div>
           <div>
-            <h5 class="text-white font-bold text-sm">Michael K.</h5>
-            <p class="text-xs text-gray-500">Marketing Lead, PixelForge</p>
+            <h5 class="text-white font-bold text-sm">Lucas Schneider</h5>
+            <p class="text-xs text-gray-500">CEO, Nordic Botanicals • Berlin, Germany</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4: Australia -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Nazrul created 12 high-converting ad carousels for our Meta campaigns. Our cost-per-acquisition dropped by 28% within the very first week."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">SR</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Sophia Reynolds</h5>
+            <p class="text-xs text-gray-500">Marketing VP, Solaria Goods • Sydney, Australia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 5: Canada -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Our craft brewery can packaging needed a bold, retro-modern look. Nazrul understood our brief instantly and nailed the design on round one!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">LH</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Liam Henderson</h5>
+            <p class="text-xs text-gray-500">Founder, Horizon Brew Co. • Toronto, Canada</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 6: France -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Incredible sense of elegance and luxury aesthetics. He reformatted our fashion catalog and book cover beautifully. Un grand merci!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">AD</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Alexandre Dubois</h5>
+            <p class="text-xs text-gray-500">Art Director, L’Étoile Atelier • Paris, France</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 7: Netherlands -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "The 3D mockups he provided helped us pre-sell 3,000 units on Kickstarter before we even began manufacturing. Outstanding work."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">CV</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Chloe Vandenberg</h5>
+            <p class="text-xs text-gray-500">Co-founder, Kroma Lab • Amsterdam, Netherlands</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 8: USA -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Super responsive and proactive communicator. Whenever I requested micro-adjustments, he turned them around within hours. 10/10 designer."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">OC</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Olivia Carter</h5>
+            <p class="text-xs text-gray-500">Creative Producer, Pulse Digital • New York, USA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 9: UK -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "He designed our clothing brand’s hangtags, poly mailers, and woven labels. Clean, vector-perfect, and modern. True craftsperson."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">BH</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Benjamin Hayes</h5>
+            <p class="text-xs text-gray-500">Head of E-com, Apex Apparel • Manchester, UK</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 10: USA (Chicago) -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Formatted our 280-page non-fiction book and designed a bestseller-worthy cover for Amazon KDP. Zero printing errors on review."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">DC</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Daniel Cooper</h5>
+            <p class="text-xs text-gray-500">Author & Publisher, Cooper Press • Chicago, USA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 11: Italy -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Working with Nazrul is seamless. His typography choices are refined and sophisticated. Exactly what our studio needed."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">IR</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Isabella Rossi</h5>
+            <p class="text-xs text-gray-500">Design Lead, Studio Milano • Milan, Italy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 12: USA (San Francisco) -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "We needed an urgent rebranding kit before our Series-A pitch. Nazrul worked day and night to deliver on time. Absolute lifesaver."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">MJ</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Matthew Jenkins</h5>
+            <p class="text-xs text-gray-500">Product VP, Vantage Tech • San Francisco, USA</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 13: Australia (Melbourne) -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Brilliant branding and color palette selection. Our wellness brand looks premium on shelf and on social media."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">CE</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Charlotte Evans</h5>
+            <p class="text-xs text-gray-500">Founder, Bloom Organics • Melbourne, Australia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 14: Switzerland -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "High quality vector master files, organized layers, and sharp identity guidelines. Nazrul is in the top 1% of designers online."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">NF</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Noah Fischer</h5>
+            <p class="text-xs text-gray-500">Managing Director, Zenith Dynamics • Zurich, Switzerland</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 15: UK (Edinburgh) -->
+      <div class="min-w-[320px] sm:min-w-[380px] max-w-[380px] flex-shrink-0 bg-brandCard border border-brandBorder rounded-3xl p-8 hover:border-brandLime/60 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brandLime text-base tracking-widest">★★★★★</div>
+            <span class="text-gray-600 font-serif text-3xl leading-none">“</span>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            "Our luxury candle brand box packaging received so many compliments in boutique stores. Cannot recommend his craft enough!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brandBorder/60">
+          <div class="w-11 h-11 rounded-full bg-brandLime/20 border border-brandLime text-brandLime font-bold flex items-center justify-center text-sm">ED</div>
+          <div>
+            <h5 class="text-white font-bold text-sm">Emily Davies</h5>
+            <p class="text-xs text-gray-500">Co-founder, Velvet Candle Co. • Edinburgh, UK</p>
           </div>
         </div>
       </div>
 
     </div>
+
+    <!-- JavaScript to slide review cards left/right -->
+    <script>
+      function slideReviews(direction) {
+        const slider = document.getElementById('reviewSlider');
+        const scrollAmount = 390; // card width + gap
+        slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    </script>
   </section>
 
-  <!-- ==================== 9. TRUSTED BY STRIP ==================== -->
-  <section class="py-12 border-y border-brandBorder bg-[#141414]">
-    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-8 text-gray-500 font-bold uppercase tracking-widest text-sm">
-      <span class="text-brandLime font-black tracking-normal">TRUSTED BY :</span>
-      <span class="hover:text-white transition">TechNova</span>
-      <span class="hover:text-white transition">BrightMind</span>
-      <span class="hover:text-white transition">PixelForge</span>
-      <span class="hover:text-white transition">Nexora</span>
-      <span class="hover:text-white transition">Volt Creative</span>
+
+  <!-- ==================== 9. TRUSTED BY (STATIC LABEL + INFINITE MARQUEE) ==================== -->
+  <section class="py-7 border-y border-brandBorder bg-[#141414] overflow-hidden select-none">
+    <div class="max-w-7xl mx-auto px-6 flex items-center">
+      
+      <!-- Static Label on Left (Always Stays in Place) -->
+      <div class="flex-shrink-0 pr-6 sm:pr-10 border-r border-brandBorder/80 z-20 bg-[#141414]">
+        <span class="text-brandLime font-black uppercase tracking-wider text-xs sm:text-sm whitespace-nowrap flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brandLime animate-ping"></span>
+          TRUSTED BY :
+        </span>
+      </div>
+
+      <!-- Running Ticker Animation Styles -->
+      <style>
+        @keyframes marqueeLogos {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-running-logos {
+          display: flex;
+          width: max-content;
+          animation: marqueeLogos 24s linear infinite;
+        }
+        .animate-running-logos:hover {
+          animation-play-state: paused; /* মাউস নিলে থেমে যাবে */
+        }
+      </style>
+
+      <!-- Infinite Running Foreign Brands Container -->
+      <div class="overflow-hidden flex-1 relative ml-4 sm:ml-8">
+        
+        <!-- Subtle Side Fades -->
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-16 bg-gradient-to-r from-[#141414] to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-16 bg-gradient-to-l from-[#141414] to-transparent z-10"></div>
+
+        <div class="animate-running-logos flex items-center gap-12 sm:gap-20 text-gray-400 font-black tracking-[0.2em] uppercase text-xs sm:text-sm">
+          
+          <!-- 1st Loop of Foreign Agencies & Brands -->
+          <span class="hover:text-brandLime transition flex items-center gap-3">AURA MEDIA <span class="text-[10px] text-gray-600 font-mono">UK</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">NORDIC BOTANICALS <span class="text-[10px] text-gray-600 font-mono">GERMANY</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">HORIZON BREW <span class="text-[10px] text-gray-600 font-mono">CANADA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">SOLARIA LIVING <span class="text-[10px] text-gray-600 font-mono">AUSTRALIA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">KROMA LABS <span class="text-[10px] text-gray-600 font-mono">NETHERLANDS</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">PULSE DIGITAL <span class="text-[10px] text-gray-600 font-mono">USA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">L'ÉTOILE ATELIER <span class="text-[10px] text-gray-600 font-mono">FRANCE</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">ZENITH DYNAMICS <span class="text-[10px] text-gray-600 font-mono">SWITZERLAND</span></span>
+
+          <!-- 2nd Duplicate Loop for Seamless Infinite Scroll -->
+          <span class="hover:text-brandLime transition flex items-center gap-3">AURA MEDIA <span class="text-[10px] text-gray-600 font-mono">UK</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">NORDIC BOTANICALS <span class="text-[10px] text-gray-600 font-mono">GERMANY</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">HORIZON BREW <span class="text-[10px] text-gray-600 font-mono">CANADA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">SOLARIA LIVING <span class="text-[10px] text-gray-600 font-mono">AUSTRALIA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">KROMA LABS <span class="text-[10px] text-gray-600 font-mono">NETHERLANDS</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">PULSE DIGITAL <span class="text-[10px] text-gray-600 font-mono">USA</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">L'ÉTOILE ATELIER <span class="text-[10px] text-gray-600 font-mono">FRANCE</span></span>
+          <span class="hover:text-brandLime transition flex items-center gap-3">ZENITH DYNAMICS <span class="text-[10px] text-gray-600 font-mono">SWITZERLAND</span></span>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
