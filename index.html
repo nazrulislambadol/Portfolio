@@ -514,13 +514,15 @@
     </div>
   </section>
 
-<!-- ==================== 6. ABOUT ME ==================== -->
+<!-- ==================== 7. ABOUT ME (CLEAN & MODERN UPGRADE) ==================== -->
   <section id="about" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
       
-      <!-- Left: Story & Signature -->
+      <!-- Col 1: Story & Signature (Left) -->
       <div class="lg:col-span-5 space-y-6">
-        <span class="text-xs uppercase tracking-widest text-brandLime font-bold">About Me</span>
+        <span class="text-xs uppercase tracking-widest text-brandLime font-bold bg-brandLime/10 border border-brandLime/20 px-3 py-1 rounded-full inline-block">
+          About Me
+        </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
           DESIGN IS NOT JUST MY PROFESSION, IT'S MY <span class="text-brandLime">PASSION.</span>
         </h2>
@@ -535,54 +537,75 @@
         </div>
       </div>
 
-      <!-- Center: Small Portrait Cutout -->
+      <!-- Col 2: Portrait with Subtle Frame & Floating Badge (Center) -->
       <div class="lg:col-span-3 flex justify-center">
-        <div class="relative w-56 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-brandBorder bg-brandCard">
-          <div class="absolute inset-0 bg-brandLime/20 mix-blend-color"></div>
-          <img src="profile.jpg" alt="Nazrul Islam" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover">
+        <div class="relative w-56 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-brandBorder bg-brandCard shadow-2xl group">
+          <!-- Image -->
+          <img src="profile.jpg" alt="Nazrul Islam" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+          
+          <!-- Bottom Floating Experience Tag -->
+          <div class="absolute bottom-3 inset-x-3 bg-brandDark/90 backdrop-blur-md border border-brandBorder py-1.5 px-2 rounded-xl text-center">
+            <span class="text-[11px] font-extrabold text-brandLime uppercase tracking-wider">
+              ✦ 5+ Years Experience
+            </span>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Updated Core Strengths (Thinner, 100% Full Bar, No Score) -->
-      <div class="lg:col-span-4 space-y-6">
+      <!-- Col 3: Sleek Strengths Cards & Resume CTA (Right) -->
+      <div class="lg:col-span-4 space-y-3">
         
-        <!-- Skill 1 -->
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-white block mb-2">Creative Problem Solving</span>
-          <div class="w-full h-1 bg-brandCard rounded-full overflow-hidden border border-brandBorder/80">
-            <div class="h-full bg-brandLime rounded-full w-full"></div>
+        <!-- Feature 1 -->
+        <div class="p-3.5 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-xl transition duration-300 flex items-start gap-3">
+          <div class="w-7 h-7 rounded-lg bg-brandLime/10 border border-brandLime/30 text-brandLime flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+            ✦
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Creative Problem Solving</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5 leading-tight">Strategic visual solutions that solve real business bottlenecks.</p>
           </div>
         </div>
 
-        <!-- Skill 2 -->
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-white block mb-2">Client Communication</span>
-          <div class="w-full h-1 bg-brandCard rounded-full overflow-hidden border border-brandBorder/80">
-            <div class="h-full bg-brandLime rounded-full w-full"></div>
+        <!-- Feature 2 -->
+        <div class="p-3.5 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-xl transition duration-300 flex items-start gap-3">
+          <div class="w-7 h-7 rounded-lg bg-brandLime/10 border border-brandLime/30 text-brandLime flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+            💬
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Client Communication</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5 leading-tight">Proactive daily updates, fast turnaround & zero time-zone friction.</p>
           </div>
         </div>
 
-        <!-- Skill 3 -->
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-white block mb-2">Project Management</span>
-          <div class="w-full h-1 bg-brandCard rounded-full overflow-hidden border border-brandBorder/80">
-            <div class="h-full bg-brandLime rounded-full w-full"></div>
+        <!-- Feature 3 -->
+        <div class="p-3.5 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-xl transition duration-300 flex items-start gap-3">
+          <div class="w-7 h-7 rounded-lg bg-brandLime/10 border border-brandLime/30 text-brandLime flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+            ⚡
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Project Management</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5 leading-tight">Punctual milestone delivery with organized vector master files.</p>
           </div>
         </div>
 
-        <!-- Skill 4 -->
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-white block mb-2">Quality Assurance</span>
-          <div class="w-full h-1 bg-brandCard rounded-full overflow-hidden border border-brandBorder/80">
-            <div class="h-full bg-brandLime rounded-full w-full"></div>
+        <!-- Feature 4 -->
+        <div class="p-3.5 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-xl transition duration-300 flex items-start gap-3">
+          <div class="w-7 h-7 rounded-lg bg-brandLime/10 border border-brandLime/30 text-brandLime flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+            🎯
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Quality Assurance</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5 leading-tight">Pixel-perfect typography, color standards & print-ready precision.</p>
           </div>
         </div>
 
         <!-- Download Resume Button -->
-        <div class="pt-3">
-          <a href="#" class="inline-flex items-center gap-2 border-2 border-brandLime text-brandLime hover:bg-brandLime hover:text-black font-bold text-xs uppercase px-6 py-3 rounded-xl transition duration-300">
+        <div class="pt-2">
+          <a href="#" class="w-full inline-flex items-center justify-center gap-2 border border-brandLime text-brandLime hover:bg-brandLime hover:text-black font-extrabold text-xs uppercase py-3 rounded-xl transition duration-300 shadow-[0_0_20px_rgba(204,255,0,0.1)]">
             DOWNLOAD RESUME
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
           </a>
         </div>
 
