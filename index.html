@@ -1444,9 +1444,11 @@
 
   </section>
 
-  <!-- ==================== 11. FOOTER CTA & CONTACT ==================== -->
+<!-- ==================== 10. FOOTER CTA & CONTACT ==================== -->
   <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
-    <div class="bg-brandLime text-black rounded-3xl p-8 sm:p-14 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+    
+    <!-- Big Banner CTA -->
+    <div class="bg-brandLime text-black rounded-3xl p-8 sm:p-14 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-[0_10px_40px_rgba(204,255,0,0.15)]">
       <div>
         <span class="text-xs uppercase font-extrabold tracking-widest bg-black text-brandLime px-3 py-1 rounded-md inline-block mb-3">
           Let's Collaborate
@@ -1456,54 +1458,79 @@
         </h2>
       </div>
 
-      <a href="https://wa.me/8801571149561" target="_blank" class="w-20 h-20 rounded-full bg-black text-brandLime hover:bg-neutral-900 flex items-center justify-center text-3xl font-black transform hover:rotate-45 transition duration-300 flex-shrink-0">
+      <a href="https://wa.me/8801571149561" target="_blank" class="w-20 h-20 rounded-full bg-black text-brandLime hover:bg-neutral-900 flex items-center justify-center text-3xl font-black transform hover:rotate-45 transition duration-300 flex-shrink-0 shadow-xl">
         ↗
       </a>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-brandBorder pb-14 text-sm">
-      <div>
+    <!-- 3-Column Footer Details -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-brandBorder pb-14 text-sm">
+      
+      <!-- Brand Bio (Col 1) -->
+      <div class="md:col-span-4">
         <div class="text-3xl font-black text-white mb-3">N<span class="text-brandLime">.</span></div>
-        <p class="text-gray-400">Available for worldwide freelance projects and creative brand consultations.</p>
+        <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+          Crafting bold visual identities, packaging, and high-impact design assets for global startups and ambitious businesses.
+        </p>
       </div>
 
-      <div>
+      <!-- Direct Contact & Global Timezone Note (Col 2) -->
+      <div class="md:col-span-5 space-y-3">
         <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">GET IN TOUCH</h5>
-        <ul class="space-y-2.5 text-gray-300">
+        
+        <ul class="space-y-2.5 text-gray-300 text-xs sm:text-sm">
           <li>
-            <a href="tel:01571149561" class="hover:text-brandLime transition flex items-center gap-2">
-              📞 +8801571149561
+            <a href="https://wa.me/8801571149561" target="_blank" class="hover:text-brandLime transition flex items-center gap-2">
+              <span class="text-brandLime">📞</span> +8801571149561 (WhatsApp Available)
             </a>
           </li>
           <li>
             <a href="mailto:nazrulislambadol17@gmail.com" class="hover:text-brandLime transition flex items-center gap-2">
-              ✉️ nazrulislambadol17@gmail.com
+              <span class="text-brandLime">✉️</span> nazrulislambadol17@gmail.com
             </a>
           </li>
           <li class="flex items-center gap-2 text-gray-400">
-            📍 Dhaka, Bangladesh
+            <span>📍</span> Dhaka, Bangladesh
           </li>
         </ul>
+
+        <!-- International Timezone Reassurance Badge -->
+        <div class="pt-2">
+          <div class="inline-flex items-center gap-2.5 bg-[#181818] border border-brandBorder hover:border-brandLime/40 px-3.5 py-2 rounded-xl text-xs text-gray-300 transition">
+            <!-- Pulsing Active Dot -->
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandLime opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brandLime"></span>
+            </span>
+            <span class="font-medium">
+              Working seamlessly across <strong class="text-white">US, UK & European</strong> Timezones
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div>
+      <!-- Social Media Links (Col 3) -->
+      <div class="md:col-span-3">
         <h5 class="text-xs uppercase font-bold tracking-widest text-brandLime mb-4">FOLLOW ME</h5>
-        <div class="flex flex-wrap gap-3">
-          <a href="https://behance.net/nazrulislambadol" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">Behance</a>
+        <div class="flex flex-wrap gap-2.5">
+          <a href="https://behance.net" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">Behance</a>
           <a href="https://dribbble.com" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">Dribbble</a>
           <a href="https://linkedin.com" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">LinkedIn</a>
           <a href="https://wa.me/8801571149561" target="_blank" class="px-4 py-2 bg-brandCard border border-brandBorder rounded-lg text-xs font-semibold hover:border-brandLime hover:text-brandLime transition">WhatsApp</a>
         </div>
       </div>
+
     </div>
 
+    <!-- Copyright Bar -->
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
       <p>© 2026 Nazrul Islam. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-        <a href="#" class="hover:text-gray-300">Terms of Service</a>
+        <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
       </div>
     </div>
+
   </footer>
 
   <!-- ==================== ★ 12. FLOATING AI CHAT WIDGET & POPUP ★ ==================== -->
