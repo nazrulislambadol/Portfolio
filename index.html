@@ -406,7 +406,7 @@
     }
   </script>
 
-<!-- ==================== 4.1 LIVE WORK SHOWCASE (SQUARE & WIDER GAP) ==================== -->
+<!-- ==================== 4.1 LIVE WORK SHOWCASE (CLEAN - NO TEXT) ==================== -->
   <section class="py-20 border-t border-brandBorder bg-[#0f0f0f] overflow-hidden relative select-none">
     
     <!-- Section Sub-Header -->
@@ -420,7 +420,7 @@
         </h3>
       </div>
       <p class="text-xs sm:text-sm text-gray-400 max-w-md">
-        Live preview of recent client deliverables across brand guides, book covers, social posts & packaging.
+        Live visual gallery of client deliverables across branding, book covers, packaging & marketing assets.
       </p>
     </div>
 
@@ -437,16 +437,16 @@
         0% { transform: translateX(-50%); }
         100% { transform: translateX(0%); }
       }
-      /* স্পিড আগের চেয়ে বাড়ানো হয়েছে (26 সেকেন্ড) */
+      /* দ্রুত ও স্মুথ স্পিড (14s) */
       .animate-banner-left {
         display: flex;
         width: max-content;
-        animation: scrollRowLeft 12s linear infinite;
+        animation: scrollRowLeft 10s linear infinite;
       }
       .animate-banner-right {
         display: flex;
         width: max-content;
-        animation: scrollRowRight 12s linear infinite;
+        animation: scrollRowRight 10s linear infinite;
       }
       .animate-banner-left:hover,
       .animate-banner-right:hover {
@@ -454,144 +454,57 @@
       }
     </style>
 
-    <!-- দুই লাইনের মাঝের গ্যাপ বাড়ানো হয়েছে (space-y-8 sm:space-y-10) -->
     <div class="space-y-8 sm:space-y-10">
       
       <!-- ================= ROW 1 (SCROLLING LEFT) ================= -->
-      <!-- কার্ডগুলোর মাঝের গ্যাপ বাড়ানো হয়েছে (gap-8 sm:gap-10) -->
       <div class="animate-banner-left flex items-center gap-8 sm:gap-10">
         
         <!-- SET 1 -->
         <div class="flex items-center gap-8 sm:gap-10 flex-shrink-0">
           
-          <!-- 1. Logo Design (Square-ish Dimensions) -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Logo Design">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">
-                Logo Design
-              </span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Minimalist Vector Brandmark</h4>
-                <p class="text-xs text-gray-300 mt-1">Custom geometry & icon system</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 2. Book Cover -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Book Cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">
-                Book Cover
-              </span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Amazon KDP Paperback Wrap</h4>
-                <p class="text-xs text-gray-300 mt-1">Typography & narrative artwork</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 3. Social Post -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Social Post">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">
-                Social Post
-              </span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">High-CTR Ad Creatives</h4>
-                <p class="text-xs text-gray-300 mt-1">Instagram & LinkedIn marketing assets</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 4. 1-Page Brand Guide -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="1 Page Brand Guide">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">
-                1-Page Brand Guide
-              </span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Brand Identity Quick Sheet</h4>
-                <p class="text-xs text-gray-300 mt-1">Color palettes, fonts & rules on 1 board</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 5. Packaging Design -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Packaging Design">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">
-                Packaging Design
-              </span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Luxury Die-Cut Box & Label</h4>
-                <p class="text-xs text-gray-300 mt-1">Print-ready CMYK master layout</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
         </div>
 
-        <!-- SET 2 (ডুপ্লিকেট সেট - অবিরাম লুপ) -->
+        <!-- SET 2 (ডুপ্লিকেট সেট - নিরবচ্ছিন্ন লুপ) -->
         <div class="flex items-center gap-8 sm:gap-10 flex-shrink-0">
           
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Logo Design">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Logo Design</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Minimalist Vector Brandmark</h4>
-                <p class="text-xs text-gray-300 mt-1">Custom geometry & icon system</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Book Cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Book Cover</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Amazon KDP Paperback Wrap</h4>
-                <p class="text-xs text-gray-300 mt-1">Typography & narrative artwork</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Social Post">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Social Post</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">High-CTR Ad Creatives</h4>
-                <p class="text-xs text-gray-300 mt-1">Instagram & LinkedIn marketing assets</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="1 Page Brand Guide">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">1-Page Brand Guide</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Brand Identity Quick Sheet</h4>
-                <p class="text-xs text-gray-300 mt-1">Color palettes, fonts & rules on 1 board</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Packaging Design">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Packaging Design</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Luxury Die-Cut Box & Label</h4>
-                <p class="text-xs text-gray-300 mt-1">Print-ready CMYK master layout</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
         </div>
@@ -604,52 +517,20 @@
         <!-- SET 1 -->
         <div class="flex items-center gap-8 sm:gap-10 flex-shrink-0">
           
-          <!-- 6. Brand Book -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Brand Book">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Brand Book</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Full Brand Style Manual (PDF)</h4>
-                <p class="text-xs text-gray-300 mt-1">Typography standards & design rules</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 7. Product Container -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product Pouch">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Product Label</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Matte Cosmetic Bottle & Jar</h4>
-                <p class="text-xs text-gray-300 mt-1">Modern label styling & barcode</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 8. Social Carousel -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Carousel Campaign">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Social Carousel</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Multi-Slide Educational Deck</h4>
-                <p class="text-xs text-gray-300 mt-1">Engagement-focused layout</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
-          <!-- 9. Print Assets -->
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Print Stationery">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Stationery Kit</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Corporate Letterhead & Cards</h4>
-                <p class="text-xs text-gray-300 mt-1">Clean typography & emboss effect</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
         </div>
@@ -658,47 +539,19 @@
         <div class="flex items-center gap-8 sm:gap-10 flex-shrink-0">
           
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Brand Book">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Brand Book</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Full Brand Style Manual (PDF)</h4>
-                <p class="text-xs text-gray-300 mt-1">Typography standards & design rules</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product Pouch">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Product Label</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Matte Cosmetic Bottle & Jar</h4>
-                <p class="text-xs text-gray-300 mt-1">Modern label styling & barcode</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Social Carousel">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Social Carousel</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Multi-Slide Educational Deck</h4>
-                <p class="text-xs text-gray-300 mt-1">Engagement-focused layout</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
           <div class="relative w-[280px] sm:w-[350px] h-[260px] sm:h-[320px] rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 group flex-shrink-0 bg-brandCard shadow-lg">
-            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Print Stationery">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 sm:p-6 flex flex-col justify-between">
-              <span class="self-start bg-black/80 backdrop-blur-md border border-brandLime/40 text-brandLime text-[10px] font-extrabold uppercase px-3 py-1 rounded-md tracking-wider">Stationery Kit</span>
-              <div>
-                <h4 class="text-white font-bold text-base sm:text-lg group-hover:text-brandLime transition">Corporate Letterhead & Cards</h4>
-                <p class="text-xs text-gray-300 mt-1">Clean typography & emboss effect</p>
-              </div>
-            </div>
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Work Showcase">
           </div>
 
         </div>
