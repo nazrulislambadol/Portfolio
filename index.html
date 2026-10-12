@@ -406,54 +406,107 @@
     }
   </script>
 
-  <!-- ==================== 5. SERVICES ==================== -->
+<!-- ==================== 5. SERVICES (WITH MINIMAL VECTOR ICONS) ==================== -->
   <section id="services" class="max-w-7xl mx-auto px-6 py-20 border-t border-brandBorder">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
       
-      <div class="lg:col-span-4 bg-brandLime text-black p-10 rounded-3xl flex flex-col justify-between">
-        <div class="text-4xl font-extrabold">↗</div>
-        <div>
-          <h2 class="text-5xl font-black uppercase tracking-tight leading-none mb-3">SERVICES</h2>
-          <p class="text-black/80 font-medium text-sm">Tailored visual solutions built to turn casual viewers into loyal customers.</p>
+      <!-- Big Lime Card on Left -->
+      <div class="lg:col-span-4 bg-brandLime text-black p-8 sm:p-10 rounded-3xl flex flex-col justify-between shadow-[0_0_35px_rgba(204,255,0,0.15)]">
+        <div class="text-3xl sm:text-4xl font-extrabold">↗</div>
+        <div class="pt-20 sm:pt-0">
+          <h2 class="text-4xl sm:text-5xl font-black uppercase tracking-tight leading-none mb-3">SERVICES</h2>
+          <p class="text-black/85 font-medium text-xs sm:text-sm leading-relaxed">
+            Tailored visual solutions built to turn casual viewers into loyal customers.
+          </p>
         </div>
       </div>
 
+      <!-- Service 2x3 Grid on Right -->
       <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
         
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">✦</div>
-          <h4 class="text-lg font-bold text-white mb-1">Logo Design</h4>
-          <p class="text-sm text-gray-400">Memorable, versatile, and vector-crafted logos that identify your core identity.</p>
+        <!-- 1. Logo Design -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- Pen Tool / Vector Node Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Logo Design</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Memorable, versatile, and vector-crafted logos that identify your core identity.</p>
         </div>
 
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📖</div>
-          <h4 class="text-lg font-bold text-white mb-1">Brand Guideline / Book</h4>
-          <p class="text-sm text-gray-400">Complete style manuals specifying typography, color codes, and usage rules.</p>
+        <!-- 2. Brand Guideline / Book -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- Open Book / Style Manual Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Brand Guideline / Book</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Complete style manuals specifying typography, color codes, and usage rules.</p>
         </div>
 
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📱</div>
-          <h4 class="text-lg font-bold text-white mb-1">Social Media Post Design</h4>
-          <p class="text-sm text-gray-400">Eye-catching social ads, carousels, and banners customized for maximum engagement.</p>
+        <!-- 3. Social Media Post Design -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- Social Grid / Creative Feed Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Social Media Post Design</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Eye-catching social ads, carousels, and banners customized for maximum engagement.</p>
         </div>
 
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📦</div>
-          <h4 class="text-lg font-bold text-white mb-1">Packaging Design</h4>
-          <p class="text-sm text-gray-400">Die-line accurate box, pouch, and container packaging ready for direct printing.</p>
+        <!-- 4. Packaging Design -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- 3D Package Cube / Box Die-line Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Packaging Design</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Die-line accurate box, pouch, and container packaging ready for direct printing.</p>
         </div>
 
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">📑</div>
-          <h4 class="text-lg font-bold text-white mb-1">Book Formatting & Cover</h4>
-          <p class="text-sm text-gray-400">Professional layout typography and book covers designed for Amazon KDP & print.</p>
+        <!-- 5. Book Formatting & Cover -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- Typesetting / Document Layout Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+              <line x1="9" y1="7" x2="15" y2="7"/>
+              <line x1="9" y1="11" x2="13" y2="11"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Book Formatting & Cover</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Professional layout typography and book covers designed for Amazon KDP & print.</p>
         </div>
 
-        <div class="p-6 bg-brandCard border border-brandBorder rounded-2xl hover:border-brandLime/50 transition">
-          <div class="w-10 h-10 rounded-lg bg-brandLime/10 text-brandLime flex items-center justify-center font-bold text-lg mb-3">🖨️</div>
-          <h4 class="text-lg font-bold text-white mb-1">Print and Digital Assets</h4>
-          <p class="text-sm text-gray-400">Brochures, flyers, business cards, billboard hoardings, and web banners.</p>
+        <!-- 6. Print and Digital Assets -->
+        <div class="group p-6 bg-brandCard border border-brandBorder hover:border-brandLime/60 rounded-2xl transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-[#222222] border border-brandBorder group-hover:border-brandLime/50 group-hover:bg-brandLime/10 text-brandLime flex items-center justify-center mb-4 transition duration-300 shadow-sm">
+            <!-- Layers & Print Master Assets Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <h4 class="text-base sm:text-lg font-bold text-white mb-1 group-hover:text-brandLime transition">Print and Digital Assets</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Brochures, flyers, business cards, billboard hoardings, and web banners.</p>
         </div>
 
       </div>
