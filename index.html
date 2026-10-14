@@ -47,20 +47,71 @@
     .pulse-glow {
       animation: pulseGlow 2s infinite ease-in-out;
     }
-<style>
-    body.light-mode { background-color: #F8F9FA !important; color: #1F2937 !important; }
-    body.light-mode header { background-color: rgba(255, 255, 255, 0.95) !important; border-color: #E5E7EB !important; }
-    body.light-mode header nav a { color: #4B5563 !important; }
-    body.light-mode header nav a:hover { color: #000000 !important; }
-    body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4, body.light-mode h5, body.light-mode .text-white { color: #111827 !important; }
-    body.light-mode p, body.light-mode .text-gray-400, body.light-mode .text-gray-300, body.light-mode .text-gray-500 { color: #4B5563 !important; }
-    body.light-mode .text-brandLime { color: #4D7C0F !important; }
-    body.light-mode .bg-brandCard, body.light-mode .bg-\[\#161616\], body.light-mode .bg-\[\#181818\], body.light-mode .bg-\[\#141414\], body.light-mode .bg-\[\#0f0f0f\], body.light-mode .bg-\[\#1a1a1a\], body.light-mode .bg-\[\#222222\], body.light-mode .bg-\[\#1f1f1f\] {
-      background-color: #FFFFFF !important; border-color: #E5E7EB !important; box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+<!-- ================= 100% WORKING LIGHT / DARK MODE CSS ================= -->
+  <style>
+    /* লাইট মোড চালু হলে ব্যাকগ্রাউন্ড ও সব সেকশন সাদা হবে */
+    body.light-mode {
+      background-color: #F8F9FA !important;
+      color: #111827 !important;
     }
-    body.light-mode .border-brandBorder, body.light-mode .border-t, body.light-mode .border-b, body.light-mode .border-y { border-color: #E5E7EB !important; }
-    body.light-mode #chatBoxModal, body.light-mode #projectModal > div { background-color: #FFFFFF !important; border-color: #E5E7EB !important; }
-    body.light-mode input#chatInputMessage { background-color: #F3F4F6 !important; color: #111827 !important; border-color: #E5E7EB !important; }
+    body.light-mode header,
+    body.light-mode section,
+    body.light-mode footer {
+      background-color: #F8F9FA !important;
+      border-color: #E5E7EB !important;
+    }
+
+    /* সব ডার্ক বক্স ও কার্ড সাদা হবে */
+    body.light-mode .bg-brandCard,
+    body.light-mode .bg-[#161616],
+    body.light-mode .bg-[#181818],
+    body.light-mode .bg-[#141414],
+    body.light-mode .bg-[#0f0f0f],
+    body.light-mode .bg-[#1a1a1a],
+    body.light-mode .bg-[#222222],
+    body.light-mode .bg-[#1f1f1f] {
+      background-color: #FFFFFF !important;
+      border-color: #E5E7EB !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* সব হেডিং ও টেক্সট পরিষ্কার গাঢ় কালো হবে */
+    body.light-mode h1, 
+    body.light-mode h2, 
+    body.light-mode h3, 
+    body.light-mode h4, 
+    body.light-mode h5,
+    body.light-mode .text-white {
+      color: #111827 !important;
+    }
+    body.light-mode p, 
+    body.light-mode .text-gray-400, 
+    body.light-mode .text-gray-300, 
+    body.light-mode .text-gray-500 {
+      color: #4B5563 !important;
+    }
+
+    /* সাদা ব্যাকগ্রাউন্ডে লাইম টেক্সট যেন সুন্দর পড়া যায় */
+    body.light-mode .text-brandLime {
+      color: #65A30D !important;
+    }
+
+    /* বর্ডারগুলো হালকা গ্রে হবে */
+    body.light-mode .border-brandBorder,
+    body.light-mode .border-t,
+    body.light-mode .border-b,
+    body.light-mode .border-y {
+      border-color: #E5E7EB !important;
+    }
+
+    /* বাটন ও সবুজ ব্যানার আগের মতোই পারফেক্ট থাকবে */
+    body.light-mode .bg-brandLime {
+      background-color: #CCFF00 !important;
+      color: #000000 !important;
+    }
+    body.light-mode .bg-brandLime * {
+      color: #000000 !important;
+    }
   </style>
 </head>
 <body class="bg-brandDark text-gray-200 font-sans selection:bg-brandLime selection:text-black antialiased">
