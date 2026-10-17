@@ -297,7 +297,7 @@
     </div>
   </section>
 
-  <!-- ==================== PROJECT SHOWCASE MODAL / POPUP GALLERY ==================== -->
+<!-- ==================== PROJECT SHOWCASE MODAL WITH FULL-VIEW LIGHTBOX ==================== -->
   <div id="projectModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
     <div class="relative bg-[#161616] border border-brandBorder rounded-3xl max-w-4xl w-full my-auto overflow-hidden shadow-2xl">
       
@@ -307,12 +307,12 @@
           <span id="modalCategory" class="text-brandLime text-xs font-bold uppercase tracking-widest">Category</span>
           <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Project Title</h3>
         </div>
-        <button onclick="closeProjectModal()" class="w-10 h-10 rounded-full bg-[#222222] hover:bg-brandLime hover:text-black text-gray-300 flex items-center justify-center text-xl transition font-bold">
+        <button onclick="closeProjectModal()" class="w-10 h-10 rounded-full bg-[#222222] hover:bg-brandLime hover:text-black text-gray-300 flex items-center justify-center text-xl transition font-bold" title="Close Gallery">
           ✕
         </button>
       </div>
 
-      <!-- Modal Body (Multiple Images & Description) -->
+      <!-- Modal Body (Images & Description) -->
       <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
         <p id="modalDesc" class="text-gray-300 text-sm leading-relaxed max-w-2xl">
           Project description details here.
@@ -320,10 +320,10 @@
 
         <!-- Dynamic Image Gallery Grid -->
         <div id="modalImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <!-- Images will be inserted here dynamically -->
+          <!-- Images inserted dynamically -->
         </div>
 
-        <!-- Hire for this service CTA -->
+        <!-- Hire CTA -->
         <div class="pt-6 border-t border-brandBorder flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-xs text-gray-400">Want similar designs for your brand?</p>
           <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="bg-brandLime text-black font-extrabold text-xs uppercase px-6 py-3 rounded-xl hover:bg-brandLimeHover transition">
@@ -335,9 +335,24 @@
     </div>
   </div>
 
-  <!-- JavaScript to Handle Gallery Data & Modal -->
+
+  <!-- ==================== ★ FULLSCREEN IMAGE LIGHTBOX MODAL ★ ==================== -->
+  <div id="imageLightboxModal" class="fixed inset-0 z-[110] bg-black/95 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8 select-none" onclick="closeImageLightbox()">
+    
+    <!-- Close Button (Top Right) -->
+    <button onclick="closeImageLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#1e1e1e] border border-brandBorder hover:border-brandLime hover:bg-brandLime hover:text-black text-white flex items-center justify-center text-2xl font-bold transition z-30 shadow-2xl" title="Close Full View">
+      ✕
+    </button>
+    
+    <!-- Image Display Box -->
+    <div class="relative max-w-5xl max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+      <img id="lightboxImage" src="" alt="Full View Design" class="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.9)] border border-brandBorder">
+    </div>
+  </div>
+
+
+  <!-- JavaScript to Handle Gallery Data, Popup & Full-View Zoom -->
   <script>
-    // আপনার প্রতি ক্যাটাগরির একাধিক প্রজেক্ট ডিজাইনের ডাটা
     const projectGalleryData = {
       brand: {
         category: "Logo & Brand Identity",
@@ -355,10 +370,10 @@ images: [
         title: "Premium Packaging & Label Box",
         description: "Die-line accurate box, pouch, and container packaging mockups designed with vibrant typography and print-ready finishes.",
         images: [
-          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80"
+          "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
         ]
       },
       social: {
@@ -366,10 +381,10 @@ images: [
         title: "High-Converting Ad Creatives & Carousels",
         description: "Engaging social media templates, promotional banners, and Instagram carousel layouts built to increase CTR and brand awareness.",
         images: [
-          "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1000&q=80",
-          "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1000&q=80"
+          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80"
         ]
       }
     };
@@ -387,23 +402,57 @@ images: [
 
       data.images.forEach(imgUrl => {
         const div = document.createElement('div');
-        div.className = "rounded-xl overflow-hidden border border-brandBorder bg-black";
-        div.innerHTML = `<img src="${imgUrl}" class="w-full h-56 sm:h-64 object-cover hover:scale-105 transition duration-300" alt="Design showcase">`;
+        div.className = "rounded-xl overflow-hidden border border-brandBorder bg-black cursor-zoom-in group relative";
+        
+        // ছবিতে ক্লিক করলে ফুল ভিউ ওপেন হবে
+        div.setAttribute("onclick", `openImageLightbox('${imgUrl}')`);
+        
+        div.innerHTML = `
+          <img src="${imgUrl}" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition duration-300" alt="Design showcase">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center pointer-events-none">
+            <span class="bg-black/80 backdrop-blur-md text-brandLime border border-brandLime/40 text-xs px-3.5 py-1.5 rounded-full font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              🔍 Full View
+            </span>
+          </div>
+        `;
         grid.appendChild(div);
       });
 
       const modal = document.getElementById('projectModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
-      document.body.style.overflow = 'hidden'; // Stop background scroll
+      document.body.style.overflow = 'hidden';
     }
 
     function closeProjectModal() {
       const modal = document.getElementById('projectModal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
-      document.body.style.overflow = 'auto'; // Enable scroll
+      document.body.style.overflow = 'auto';
     }
+
+    // ================= FULL VIEW LIGHTBOX FUNCTIONS =================
+    function openImageLightbox(src) {
+      const lightbox = document.getElementById('imageLightboxModal');
+      const img = document.getElementById('lightboxImage');
+      img.src = src;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    }
+
+    function closeImageLightbox() {
+      const lightbox = document.getElementById('imageLightboxModal');
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.getElementById('lightboxImage').src = '';
+    }
+
+    // কীবোর্ডের Esc চাপলে ফুল ভিউ বন্ধ হবে
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") {
+        closeImageLightbox();
+      }
+    });
   </script>
 
 <!-- ==================== 4.1 LIVE WORK SHOWCASE (CLEAN - NO TEXT) ==================== -->
