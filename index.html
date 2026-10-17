@@ -224,8 +224,10 @@
     </div>
   </section>
 
-<!-- ==================== 4. SELECTED WORK (WITH POPUP GALLERY) ==================== -->
+<!-- ==================== 4. SELECTED WORK (100% FIXED GRID) ==================== -->
   <section id="work" class="max-w-7xl mx-auto px-6 py-24">
+    
+    <!-- Section Header -->
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
       <div>
         <h2 class="text-4xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
@@ -239,44 +241,28 @@
       </a>
     </div>
 
-    <!-- Portfolio 3-Column Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- 3-Column Grid Container (পাশাপাশি ৩টি কার্ড) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
       
-<!-- Card 1: Brand Identity (CUSTOM CODE ARTWORK) -->
-      <div onclick="openProjectModal('brand')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-500 transform hover:-translate-y-1">
+      <!-- ================= CARD 1: BRAND IDENTITY (CUSTOM CODE ARTWORK) ================= -->
+      <div onclick="openProjectModal('brand')" class="group cursor-pointer relative bg-brandCard rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-500 transform hover:-translate-y-1.5 flex flex-col justify-between shadow-xl">
         
-        <!-- ================= REFERENCE STYLE VISUAL ARTWORK ================= -->
-        <div class="aspect-[4/3] overflow-hidden bg-[#0a0a0a] relative flex items-center justify-center select-none">
-          
-          <!-- সেন্ট্রাল ইলেকট্রিক লাইম অ্যাম্বিয়েন্ট গ্লো (Radial Glow) -->
-          <div class="absolute w-44 h-44 sm:w-56 sm:h-56 rounded-full bg-brandLime/25 blur-3xl group-hover:bg-brandLime/40 group-hover:scale-125 transition-all duration-700 pointer-events-none"></div>
+        <!-- Artwork Canvas Area -->
+        <div class="aspect-[4/3] overflow-hidden bg-[#0a0a0a] relative flex items-center justify-center select-none border-b border-brandBorder/60">
+          <!-- Central Lime Ambient Glow -->
+          <div class="absolute w-44 h-44 rounded-full bg-brandLime/25 blur-3xl group-hover:bg-brandLime/40 group-hover:scale-125 transition-all duration-700 pointer-events-none"></div>
 
-          <!-- সূক্ষ্ম ব্যাকগ্রাউন্ড গ্রিড প্যাটার্ন -->
-          <div class="absolute inset-0 bg-[radial-gradient(#282828_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none"></div>
+          <!-- Floating Tags -->
+          <span class="absolute top-6 left-6 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Moodboard</span>
+          <span class="absolute top-6 right-6 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Color palette</span>
+          <span class="absolute left-5 top-1/2 -translate-y-1/2 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Logo system</span>
+          <span class="absolute right-5 top-1/2 -translate-y-1/2 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Patterns</span>
+          <span class="absolute bottom-6 left-6 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Graphic elements</span>
+          <span class="absolute bottom-6 right-6 text-[10px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition">Typography</span>
 
-          <!-- ফ্লোটিং ব্র্যান্ড এলিমেন্টস (রেফারেন্সের মতো চারপাশে ভাসমান ট্যাগ) -->
-          <span class="absolute top-7 left-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Moodboard
-          </span>
-          <span class="absolute top-7 right-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Color palette
-          </span>
-          <span class="absolute left-6 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Logo system
-          </span>
-          <span class="absolute right-6 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Patterns
-          </span>
-          <span class="absolute bottom-10 left-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Graphic elements
-          </span>
-          <span class="absolute bottom-6 right-16 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
-            Typography
-          </span>
-
-          <!-- মাঝের মূল বোল্ড টাইপোগ্রাফি (Visual Identity) -->
-          <div class="relative z-10 text-center transform group-hover:scale-105 transition-all duration-500">
-            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
+          <!-- Central Bold Typography -->
+          <div class="relative z-10 text-center transform group-hover:scale-105 transition duration-500">
+            <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
               Visual <br>
               <span class="text-brandLime font-black italic tracking-normal drop-shadow-[0_0_20px_rgba(204,255,0,0.5)]">
                 Identity
@@ -284,69 +270,63 @@
             </h3>
           </div>
 
-          <!-- হোভার করলে 'View Designs' ব্যাজ ভেসে উঠবে -->
-          <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20">
+          <!-- Hover 'View Designs' Overlay -->
+          <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center z-20">
             <span class="bg-brandLime text-black font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-wider shadow-[0_0_25px_rgba(204,255,0,0.5)] transform -translate-y-2 group-hover:translate-y-0 transition duration-300">
               View Designs ↗
             </span>
           </div>
         </div>
 
-        <!-- কার্ডের নিচের ইনফো অংশ -->
+        <!-- Card Footer -->
         <div class="p-6 flex items-center justify-between">
           <div>
-            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
-            <p class="text-sm text-gray-400">Logo, Styleguide & Visuals</p>
+            <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
+            <p class="text-xs sm:text-sm text-gray-400 mt-0.5">Logo, Styleguide & Visuals</p>
           </div>
-          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
-            ↗
-          </span>
-        </div>
-      </div>
-        <div class="p-6 flex items-center justify-between">
-          <div>
-            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
-            <p class="text-sm text-gray-400">Logo, Styleguide & Visuals</p>
-          </div>
-          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition flex-shrink-0">
             ↗
           </span>
         </div>
       </div>
 
-      <!-- Card 2: Packaging Design -->
-      <div onclick="openProjectModal('packaging')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
+      <!-- ================= CARD 2: PACKAGING DESIGN ================= -->
+      <div onclick="openProjectModal('packaging')" class="group cursor-pointer relative bg-brandCard rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-500 transform hover:-translate-y-1.5 flex flex-col justify-between shadow-xl">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative border-b border-brandBorder/60">
           <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-wider shadow-[0_0_25px_rgba(204,255,0,0.5)] transform -translate-y-2 group-hover:translate-y-0 transition duration-300">
+              View Designs ↗
+            </span>
           </div>
         </div>
         <div class="p-6 flex items-center justify-between">
           <div>
-            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">PACKAGING DESIGN</h4>
-            <p class="text-sm text-gray-400">Box, Label & 3D Mockups</p>
+            <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-brandLime transition">PACKAGING DESIGN</h4>
+            <p class="text-xs sm:text-sm text-gray-400 mt-0.5">Box, Label & 3D Mockups</p>
           </div>
-          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition flex-shrink-0">
             ↗
           </span>
         </div>
       </div>
 
-      <!-- Card 3: Social Media Kit -->
-      <div onclick="openProjectModal('social')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
-          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Social Media Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+      <!-- ================= CARD 3: SOCIAL MEDIA KIT ================= -->
+      <div onclick="openProjectModal('social')" class="group cursor-pointer relative bg-brandCard rounded-3xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-500 transform hover:-translate-y-1.5 flex flex-col justify-between shadow-xl">
+        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative border-b border-brandBorder/60">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-wider shadow-[0_0_25px_rgba(204,255,0,0.5)] transform -translate-y-2 group-hover:translate-y-0 transition duration-300">
+              View Designs ↗
+            </span>
           </div>
         </div>
         <div class="p-6 flex items-center justify-between">
           <div>
-            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">SOCIAL MEDIA KIT</h4>
-            <p class="text-sm text-gray-400">High-converting Ad Creatives</p>
+            <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-brandLime transition">SOCIAL MEDIA KIT</h4>
+            <p class="text-xs sm:text-sm text-gray-400 mt-0.5">High-converting Ad Creatives</p>
           </div>
-          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition flex-shrink-0">
             ↗
           </span>
         </div>
@@ -355,61 +335,34 @@
     </div>
   </section>
 
-<!-- ==================== PROJECT SHOWCASE MODAL WITH FULL-VIEW LIGHTBOX ==================== -->
+  <!-- ==================== POPUP MODAL & FULL-VIEW LIGHTBOX ==================== -->
   <div id="projectModal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
     <div class="relative bg-[#161616] border border-brandBorder rounded-3xl max-w-4xl w-full my-auto overflow-hidden shadow-2xl">
-      
-      <!-- Modal Header -->
       <div class="sticky top-0 bg-[#161616]/95 backdrop-blur-md border-b border-brandBorder p-6 flex items-center justify-between z-10">
         <div>
           <span id="modalCategory" class="text-brandLime text-xs font-bold uppercase tracking-widest">Category</span>
           <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Project Title</h3>
         </div>
-        <button onclick="closeProjectModal()" class="w-10 h-10 rounded-full bg-[#222222] hover:bg-brandLime hover:text-black text-gray-300 flex items-center justify-center text-xl transition font-bold" title="Close Gallery">
-          ✕
-        </button>
+        <button onclick="closeProjectModal()" class="w-10 h-10 rounded-full bg-[#222222] hover:bg-brandLime hover:text-black text-gray-300 flex items-center justify-center text-xl transition font-bold">✕</button>
       </div>
-
-      <!-- Modal Body (Images & Description) -->
       <div class="p-6 sm:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
-        <p id="modalDesc" class="text-gray-300 text-sm leading-relaxed max-w-2xl">
-          Project description details here.
-        </p>
-
-        <!-- Dynamic Image Gallery Grid -->
-        <div id="modalImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <!-- Images inserted dynamically -->
-        </div>
-
-        <!-- Hire CTA -->
+        <p id="modalDesc" class="text-gray-300 text-sm leading-relaxed max-w-2xl">Project details.</p>
+        <div id="modalImagesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2"></div>
         <div class="pt-6 border-t border-brandBorder flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-xs text-gray-400">Want similar designs for your brand?</p>
-          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="bg-brandLime text-black font-extrabold text-xs uppercase px-6 py-3 rounded-xl hover:bg-brandLimeHover transition">
-            Get A Quote For This ↗
-          </a>
+          <a href="https://wa.me/8801571149561" target="_blank" class="bg-brandLime text-black font-extrabold text-xs uppercase px-6 py-3 rounded-xl hover:bg-brandLimeHover transition">Get A Quote For This ↗</a>
         </div>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ==================== ★ FULLSCREEN IMAGE LIGHTBOX MODAL ★ ==================== -->
   <div id="imageLightboxModal" class="fixed inset-0 z-[110] bg-black/95 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8 select-none" onclick="closeImageLightbox()">
-    
-    <!-- Close Button (Top Right) -->
-    <button onclick="closeImageLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#1e1e1e] border border-brandBorder hover:border-brandLime hover:bg-brandLime hover:text-black text-white flex items-center justify-center text-2xl font-bold transition z-30 shadow-2xl" title="Close Full View">
-      ✕
-    </button>
-    
-    <!-- Image Display Box -->
+    <button onclick="closeImageLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#1e1e1e] border border-brandBorder hover:border-brandLime hover:bg-brandLime hover:text-black text-white flex items-center justify-center text-2xl font-bold transition z-30 shadow-2xl">✕</button>
     <div class="relative max-w-5xl max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
       <img id="lightboxImage" src="" alt="Full View Design" class="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.9)] border border-brandBorder">
     </div>
   </div>
 
-
-  <!-- JavaScript to Handle Gallery Data, Popup & Full-View Zoom -->
   <script>
     const projectGalleryData = {
       brand: {
@@ -450,21 +403,15 @@ images: [
     function openProjectModal(key) {
       const data = projectGalleryData[key];
       if (!data) return;
-
       document.getElementById('modalCategory').innerText = data.category;
       document.getElementById('modalTitle').innerText = data.title;
       document.getElementById('modalDesc').innerText = data.description;
-
       const grid = document.getElementById('modalImagesGrid');
       grid.innerHTML = '';
-
       data.images.forEach(imgUrl => {
         const div = document.createElement('div');
         div.className = "rounded-xl overflow-hidden border border-brandBorder bg-black cursor-zoom-in group relative";
-        
-        // ছবিতে ক্লিক করলে ফুল ভিউ ওপেন হবে
         div.setAttribute("onclick", `openImageLightbox('${imgUrl}')`);
-        
         div.innerHTML = `
           <img src="${imgUrl}" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition duration-300" alt="Design showcase">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center pointer-events-none">
@@ -475,7 +422,6 @@ images: [
         `;
         grid.appendChild(div);
       });
-
       const modal = document.getElementById('projectModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -489,7 +435,6 @@ images: [
       document.body.style.overflow = 'auto';
     }
 
-    // ================= FULL VIEW LIGHTBOX FUNCTIONS =================
     function openImageLightbox(src) {
       const lightbox = document.getElementById('imageLightboxModal');
       const img = document.getElementById('lightboxImage');
@@ -505,7 +450,6 @@ images: [
       document.getElementById('lightboxImage').src = '';
     }
 
-    // কীবোর্ডের Esc চাপলে ফুল ভিউ বন্ধ হবে
     document.addEventListener('keydown', function(e) {
       if (e.key === "Escape") {
         closeImageLightbox();
