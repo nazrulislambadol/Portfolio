@@ -151,69 +151,74 @@
     </div>
   </section>
 
-<!-- ==================== 3. STATS INFINITE RUNNING STRIP ==================== -->
-  <section class="border-y border-brandBorder bg-[#161616] py-8 overflow-hidden relative select-none">
+<!-- ==================== 3. STATS INFINITE RUNNING STRIP (CONTAINED) ==================== -->
+  <section class="border-y border-brandBorder bg-[#161616] py-7 select-none">
     
-    <!-- দুই পাশে স্মুথ ফেড শ্যাডো (প্রিমিয়াম লুকের জন্য) -->
-    <div class="pointer-events-none absolute inset-y-0 left-0 w-20 md:w-32 bg-gradient-to-r from-brandDark to-transparent z-10"></div>
-    <div class="pointer-events-none absolute inset-y-0 right-0 w-20 md:w-32 bg-gradient-to-l from-brandDark to-transparent z-10"></div>
-
-    <style>
-      @keyframes runningStats {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-50%); }
-      }
-      .animate-running-stats {
-        display: flex;
-        width: max-content;
-        animation: runningStats 16s linear infinite;
-      }
-      .animate-running-stats:hover {
-        animation-play-state: paused; /* মাউস নিলে থেমে যাবে */
-      }
-    </style>
-
-    <!-- Running Container -->
-    <div class="animate-running-stats flex items-center gap-16 md:gap-28">
+    <!-- কন্টেইনারটিকে SELECTED WORK এর সমান মাপে (max-w-7xl) সীমাবদ্ধ করা হলো -->
+    <div class="max-w-7xl mx-auto px-6 relative overflow-hidden">
       
-      <!-- ১ম সেট -->
-      <div class="flex items-center gap-16 md:gap-28 flex-shrink-0">
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">5+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Years of Experience</p>
-        </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">120+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Projects Completed</p>
-        </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">60+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Happy Clients</p>
-        </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">100%</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Satisfaction Rate</p>
-        </div>
-      </div>
+      <!-- দুই পাশের ফেড শ্যাডো (ঠিক আপনার মার্ক করা লাল দাগের সীমানায় ফেড হবে) -->
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#161616] to-transparent z-10"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-[#161616] to-transparent z-10"></div>
 
-      <!-- ২য় সেট (লুপ মসৃণ ও অবিরাম রাখার জন্য ডুপ্লিকেট) -->
-      <div class="flex items-center gap-16 md:gap-28 flex-shrink-0">
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">5+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Years of Experience</p>
+      <style>
+        @keyframes runningStatsContained {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-running-stats-box {
+          display: flex;
+          width: max-content;
+          animation: runningStatsContained 22s linear infinite;
+        }
+        .animate-running-stats-box:hover {
+          animation-play-state: paused; /* মাউস নিলে থেমে যাবে */
+        }
+      </style>
+
+      <!-- Running Content -->
+      <div class="animate-running-stats-box flex items-center gap-14 sm:gap-24">
+        
+        <!-- ১ম সেট -->
+        <div class="flex items-center gap-14 sm:gap-24 flex-shrink-0">
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">5+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Years of Experience</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">120+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Projects Completed</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">60+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Happy Clients</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">100%</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Satisfaction Rate</p>
+          </div>
         </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">120+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Projects Completed</p>
+
+        <!-- ২য় সেট (নিরবচ্ছিন্ন লুপের জন্য) -->
+        <div class="flex items-center gap-14 sm:gap-24 flex-shrink-0">
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">5+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Years of Experience</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">120+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Projects Completed</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">60+</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Happy Clients</p>
+          </div>
+          <div class="text-center space-y-1">
+            <h3 class="text-4xl sm:text-5xl font-black text-brandLime">100%</h3>
+            <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Satisfaction Rate</p>
+          </div>
         </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">60+</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Happy Clients</p>
-        </div>
-        <div class="text-center space-y-1">
-          <h3 class="text-4xl sm:text-5xl font-black text-brandLime">100%</h3>
-          <p class="text-[11px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold">Satisfaction Rate</p>
-        </div>
+
       </div>
 
     </div>
