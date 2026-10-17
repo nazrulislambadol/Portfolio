@@ -242,14 +242,67 @@
     <!-- Portfolio 3-Column Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <!-- Card 1: Brand Identity -->
-      <div onclick="openProjectModal('brand')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-300 transform hover:-translate-y-1">
-        <div class="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
-          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <span class="bg-brandLime text-black font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-wider">View Designs ↗</span>
+<!-- Card 1: Brand Identity (CUSTOM CODE ARTWORK) -->
+      <div onclick="openProjectModal('brand')" class="group cursor-pointer relative bg-brandCard rounded-2xl overflow-hidden border border-brandBorder hover:border-brandLime transition duration-500 transform hover:-translate-y-1">
+        
+        <!-- ================= REFERENCE STYLE VISUAL ARTWORK ================= -->
+        <div class="aspect-[4/3] overflow-hidden bg-[#0a0a0a] relative flex items-center justify-center select-none">
+          
+          <!-- সেন্ট্রাল ইলেকট্রিক লাইম অ্যাম্বিয়েন্ট গ্লো (Radial Glow) -->
+          <div class="absolute w-44 h-44 sm:w-56 sm:h-56 rounded-full bg-brandLime/25 blur-3xl group-hover:bg-brandLime/40 group-hover:scale-125 transition-all duration-700 pointer-events-none"></div>
+
+          <!-- সূক্ষ্ম ব্যাকগ্রাউন্ড গ্রিড প্যাটার্ন -->
+          <div class="absolute inset-0 bg-[radial-gradient(#282828_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none"></div>
+
+          <!-- ফ্লোটিং ব্র্যান্ড এলিমেন্টস (রেফারেন্সের মতো চারপাশে ভাসমান ট্যাগ) -->
+          <span class="absolute top-7 left-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Moodboard
+          </span>
+          <span class="absolute top-7 right-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Color palette
+          </span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Logo system
+          </span>
+          <span class="absolute right-6 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Patterns
+          </span>
+          <span class="absolute bottom-10 left-8 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Graphic elements
+          </span>
+          <span class="absolute bottom-6 right-16 text-[11px] sm:text-xs text-gray-400/90 font-medium tracking-wide group-hover:text-white transition duration-300">
+            Typography
+          </span>
+
+          <!-- মাঝের মূল বোল্ড টাইপোগ্রাফি (Visual Identity) -->
+          <div class="relative z-10 text-center transform group-hover:scale-105 transition-all duration-500">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
+              Visual <br>
+              <span class="text-brandLime font-black italic tracking-normal drop-shadow-[0_0_20px_rgba(204,255,0,0.5)]">
+                Identity
+              </span>
+            </h3>
+          </div>
+
+          <!-- হোভার করলে 'View Designs' ব্যাজ ভেসে উঠবে -->
+          <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20">
+            <span class="bg-brandLime text-black font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-wider shadow-[0_0_25px_rgba(204,255,0,0.5)] transform -translate-y-2 group-hover:translate-y-0 transition duration-300">
+              View Designs ↗
+            </span>
           </div>
         </div>
+
+        <!-- কার্ডের নিচের ইনফো অংশ -->
+        <div class="p-6 flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
+            <p class="text-sm text-gray-400">Logo, Styleguide & Visuals</p>
+          </div>
+          <span class="w-10 h-10 rounded-full border border-brandBorder group-hover:border-brandLime group-hover:bg-brandLime group-hover:text-black flex items-center justify-center transition">
+            ↗
+          </span>
+        </div>
+      </div>
         <div class="p-6 flex items-center justify-between">
           <div>
             <h4 class="text-xl font-bold text-white group-hover:text-brandLime transition">BRAND IDENTITY</h4>
