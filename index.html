@@ -1729,21 +1729,230 @@ images: [
 <!-- ==================== 11. FOOTER CTA & CONTACT ==================== -->
   <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     
-    <!-- Big Banner CTA -->
-    <div class="bg-brandLime text-black rounded-3xl p-8 sm:p-14 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-[0_10px_40px_rgba(204,255,0,0.15)]">
-      <div>
-        <span class="text-xs uppercase font-extrabold tracking-widest bg-black text-brandLime px-3 py-1 rounded-md inline-block mb-3">
-          Let's Collaborate
-        </span>
-        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
-          LET'S CREATE <br> SOMETHING GREAT TOGETHER.
-        </h2>
-      </div>
+<!-- ========================================== -->
+<!-- LET'S COLLABORATE & CONTACT SECTION CODE   -->
+<!-- ========================================== -->
 
-      <a href="https://wa.me/8801571149561" target="_blank" class="w-20 h-20 rounded-full bg-black text-brandLime hover:bg-neutral-900 flex items-center justify-center text-3xl font-black transform hover:rotate-45 transition duration-300 flex-shrink-0 shadow-xl">
-        ↗
-      </a>
+<style>
+/* CTA Section Main Container */
+.cta-section {
+    background-color: #121212;
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Big Neon Green Box */
+.cta-box {
+    background-color: #bcf300;
+    width: 100%;
+    max-width: 1250px;
+    border-radius: 28px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(188, 243, 0, 0.1);
+}
+
+/* Left Content Area */
+.cta-content {
+    max-width: 500px;
+}
+
+.cta-badge {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.cta-title {
+    color: #000000;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: inherit;
+}
+
+/* Right Side Form Wrapper (Dark Box inside Neon Box) */
+.cta-form-wrapper {
+    background-color: #181818;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-form-wrapper h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: inherit;
+}
+
+/* Form Inputs & Select & Textarea */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.cta-form-wrapper input,
+.cta-form-wrapper select,
+.cta-form-wrapper textarea {
+    width: 100%;
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 14px 18px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.cta-form-wrapper input::placeholder,
+.cta-form-wrapper textarea::placeholder {
+    color: #777777;
+}
+
+.cta-form-wrapper select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.cta-form-wrapper select option {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.cta-form-wrapper input:focus,
+.cta-form-wrapper select:focus,
+.cta-form-wrapper textarea:focus {
+    border-color: #bcf300;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: inherit;
+}
+
+.submit-btn:hover {
+    background-color: #bcf300;
+    color: #000000;
+}
+
+.submit-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* Responsive Design for Mobile & Tablet */
+@media (max-width: 992px) {
+    .cta-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+    
+    .cta-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cta-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .cta-title {
+        font-size: 32px;
+    }
+
+    .cta-form-wrapper {
+        max-width: 100%;
+    }
+}
+</style>
+
+<!-- HTML Section Start -->
+<section class="cta-section" id="contact">
+    <div class="cta-box">
+        <!-- বাম পাশের টেক্সট কন্টেন্ট -->
+        <div class="cta-content">
+            <span class="cta-badge">LET'S COLLABORATE</span>
+            <h2 class="cta-title">LET'S CREATE SOMETHING GREAT TOGETHER.</h2>
+        </div>
+
+        <!-- ডান পাশের "Let's work together" ফর্ম বক্স -->
+        <div class="cta-form-wrapper">
+            <h3>Let's work together</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Select service...</option>
+                        <option value="logo">Logo & Branding</option>
+                        <option value="packaging">Packaging Design</option>
+                        <option value="book">Book Cover</option>
+                        <option value="social">Social Media Kit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell me about your project" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send message 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
     </div>
+</section>
+<!-- HTML Section End -->
 
     <!-- 3-Column Footer Details -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-brandBorder pb-14 text-sm">
