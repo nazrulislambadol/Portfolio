@@ -1318,11 +1318,11 @@ images: [
     </div>
   </section>
 
-<!-- ==================== 6. MY PACKAGES (INTERACTIVE TABS PRICING) ==================== -->
+<!-- ==================== 6. MY PACKAGES (5 SERVICES TABS PRICING) ==================== -->
   <section id="pricing" class="max-w-7xl mx-auto px-6 py-24 border-t border-brandBorder">
     
     <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-12">
+    <div class="text-center max-w-4xl mx-auto mb-12">
       <h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
         Tailored Design <span class="text-brandLime">Pricing</span>
       </h2>
@@ -1330,25 +1330,28 @@ images: [
         Transparent, deliverable-focused packages crafted for startups, brands, and businesses worldwide.
       </p>
 
-      <!-- Category Filter Tab Buttons (Clickable Tabs) -->
+      <!-- Category Filter Tab Buttons (5 Services Tabs) -->
       <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
-        <button id="tab-btn-logo" onclick="switchPricingCategory('logo', this)" class="pricing-tab-btn bg-brandLime text-black px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(204,255,0,0.25)] cursor-pointer transition">
-          Logo & Branding
+        <button id="tab-btn-logo" onclick="switchPricingCategory('logo', this)" class="pricing-tab-btn bg-brandLime text-black px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(204,255,0,0.25)] cursor-pointer transition">
+          1. Logo & Brand Identity
         </button>
-        <button id="tab-btn-packaging" onclick="switchPricingCategory('packaging', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
-          Packaging Design
+        <button id="tab-btn-packaging" onclick="switchPricingCategory('packaging', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
+          2. Packaging & Label
         </button>
-        <button id="tab-btn-book" onclick="switchPricingCategory('book', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
-          Book Cover
+        <button id="tab-btn-book" onclick="switchPricingCategory('book', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
+          3. Book Cover & Formatting
         </button>
-        <button id="tab-btn-social" onclick="switchPricingCategory('social', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
-          Social Media Design
+        <button id="tab-btn-social" onclick="switchPricingCategory('social', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
+          4. Social Media Posts
+        </button>
+        <button id="tab-btn-mockup" onclick="switchPricingCategory('mockup', this)" class="pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition">
+          5. Product Mockups
         </button>
       </div>
     </div>
 
 
-    <!-- ================= CATEGORY 1: LOGO & BRANDING ================= -->
+    <!-- ================= 1. LOGO & BRAND IDENTITY ================= -->
     <div id="pricing-grid-logo" class="pricing-category-grid grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
       
       <!-- Basic -->
@@ -1379,7 +1382,7 @@ images: [
         </div>
       </div>
 
-      <!-- Standard (Most Popular) -->
+      <!-- Standard -->
       <div class="relative bg-brandCard border-2 border-brandLime rounded-3xl p-8 flex flex-col justify-between shadow-[0_0_35px_rgba(204,255,0,0.15)] scale-[1.02]">
         <span class="absolute -top-3.5 right-8 bg-brandLime text-black font-extrabold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md">Most Popular</span>
         <div>
@@ -1439,7 +1442,7 @@ images: [
     </div>
 
 
-    <!-- ================= CATEGORY 2: PACKAGING DESIGN ================= -->
+    <!-- ================= 2. PACKAGING & LABEL DESIGN ================= -->
     <div id="pricing-grid-packaging" class="pricing-category-grid hidden grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
       
       <!-- Basic Packaging -->
@@ -1527,7 +1530,7 @@ images: [
     </div>
 
 
-    <!-- ================= CATEGORY 3: BOOK COVER & FORMATTING ================= -->
+    <!-- ================= 3. BOOK COVER DESIGN & FORMATTING ================= -->
     <div id="pricing-grid-book" class="pricing-category-grid hidden grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
       
       <!-- Basic Book -->
@@ -1614,7 +1617,7 @@ images: [
     </div>
 
 
-    <!-- ================= CATEGORY 4: SOCIAL MEDIA DESIGN ================= -->
+    <!-- ================= 4. SOCIAL MEDIA POSTS & BANNERS ================= -->
     <div id="pricing-grid-social" class="pricing-category-grid hidden grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
       
       <!-- Basic Social -->
@@ -1681,7 +1684,7 @@ images: [
             <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
           </div>
           <div class="border-t border-brandBorder pt-6">
-            <p class="text-xs uppercase font-extrabold tracking-wider text-gray-400 mb-4">What's Included:</p>
+            <p class="text-xs uppercase font-extrabold tracking-wider text-brandLime mb-4">What's Included:</p>
             <ul class="space-y-3.5 text-xs text-gray-300">
               <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>25 High-converting ads & multi-slide carousels</span></li>
               <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Full social branding (Banner headers for LinkedIn/FB)</span></li>
@@ -1693,6 +1696,93 @@ images: [
         </div>
         <div class="pt-8 mt-6">
           <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20Social%20Media%20Premium%20Package%20($110)." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#222222] text-white border border-brandBorder hover:border-brandLime hover:text-brandLime py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ================= 5. PRODUCT MOCKUPS ================= -->
+    <div id="pricing-grid-mockup" class="pricing-category-grid hidden grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-4">
+      
+      <!-- Basic Mockup -->
+      <div class="bg-brandCard border border-brandBorder rounded-3xl p-8 flex flex-col justify-between hover:border-brandLime/40 transition duration-300">
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Basic</h3>
+          <p class="text-xs text-gray-400 mt-1">3 Photorealistic product mockups</p>
+          <div class="my-6">
+            <span class="text-4xl sm:text-5xl font-black text-white">$30</span>
+            <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+          </div>
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-gray-400 mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>3 High-resolution 3D product mockups</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Clean studio background lighting</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Optimized for Amazon & Shopify listings</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>2 Revision rounds</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20Product%20Mockup%20Basic%20Package%20($30)." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#222222] text-white border border-brandBorder hover:border-brandLime hover:text-brandLime py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Standard Mockup -->
+      <div class="relative bg-brandCard border-2 border-brandLime rounded-3xl p-8 flex flex-col justify-between shadow-[0_0_35px_rgba(204,255,0,0.15)] scale-[1.02]">
+        <span class="absolute -top-3.5 right-8 bg-brandLime text-black font-extrabold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md">Most Popular</span>
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Standard</h3>
+          <p class="text-xs text-brandLime/90 mt-1">7 Custom scene mockups + commercial use</p>
+          <div class="my-6">
+            <span class="text-4xl sm:text-5xl font-black text-brandLime">$65</span>
+            <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+          </div>
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-brandLime mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>7 Unique 3D product presentation scenes</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Custom background styling & shadows</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>PSD Source files with smart objects</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Social media promo bundle mockups</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>4 Revision rounds</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20Product%20Mockup%20Standard%20Package%20($65)." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-brandLime text-black hover:bg-brandLimeHover py-4 rounded-xl text-xs font-extrabold uppercase tracking-wider transition shadow-lg">
+            Get started ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Premium Mockup -->
+      <div class="bg-brandCard border border-brandBorder rounded-3xl p-8 flex flex-col justify-between hover:border-brandLime/40 transition duration-300">
+        <div>
+          <h3 class="text-3xl font-extrabold text-white">Premium</h3>
+          <p class="text-xs text-gray-400 mt-1">Full product lineup + custom 3D environment</p>
+          <div class="my-6">
+            <span class="text-4xl sm:text-5xl font-black text-white">$100</span>
+            <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">/ project</span>
+          </div>
+          <div class="border-t border-brandBorder pt-6">
+            <p class="text-xs uppercase font-extrabold tracking-wider text-gray-400 mb-4">What's Included:</p>
+            <ul class="space-y-3.5 text-xs text-gray-300">
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>15+ Photorealistic full lineup mockups</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Custom 3D environment & lighting setups</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>High-end marketing banner integration</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Full commercial rights & layers</span></li>
+              <li class="flex items-start gap-2.5"><span class="text-brandLime font-bold">✓</span><span>Unlimited priority revisions</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 mt-6">
+          <a href="https://wa.me/8801571149561?text=Hello%20Nazrul,%20I%20am%20interested%20in%20Product%20Mockup%20Premium%20Package%20($100)." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#222222] text-white border border-brandBorder hover:border-brandLime hover:text-brandLime py-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
             Get started ↗
           </a>
         </div>
@@ -1716,11 +1806,11 @@ images: [
         // Reset all tab button styles to inactive
         const allButtons = document.querySelectorAll('.pricing-tab-btn');
         allButtons.forEach(btn => {
-          btn.className = 'pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition';
+          btn.className = 'pricing-tab-btn bg-brandCard border border-brandBorder text-gray-300 px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-brandLime/60 cursor-pointer transition';
         });
 
         // Set the clicked button as active (Electric Lime)
-        activeBtn.className = 'pricing-tab-btn bg-brandLime text-black px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(204,255,0,0.25)] cursor-pointer transition';
+        activeBtn.className = 'pricing-tab-btn bg-brandLime text-black px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-[0_0_15px_rgba(204,255,0,0.25)] cursor-pointer transition';
       }
     </script>
 
