@@ -1729,109 +1729,109 @@ images: [
 <!-- ==================== 11. FOOTER CTA & CONTACT ==================== -->
   <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     
-    <!-- Wide Slender Balanced CTA Banner (Extended & Low Height) -->
-    <div class="w-full mb-16">
-      <div class="bg-brandLime text-black rounded-[2.5rem] px-8 sm:px-14 py-8 sm:py-10 relative overflow-hidden shadow-[0_15px_50px_rgba(204,255,0,0.15)]">
+<!-- ==================== WIDE SLENDER CTA BANNER (BALANCED SPACING) ==================== -->
+  <div class="max-w-7xl mx-auto px-6 mt-4 mb-16">
+    <div class="bg-brandLime text-black rounded-[2rem] px-8 sm:px-14 py-8 sm:py-10 relative overflow-hidden shadow-[0_15px_50px_rgba(204,255,0,0.15)]">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <!-- Left Side: Compact Title -->
-          <div class="lg:col-span-6 space-y-3">
-            <span class="text-[10px] uppercase font-extrabold tracking-widest bg-black text-brandLime px-3.5 py-1.5 rounded-full inline-block">
-              LET'S COLLABORATE
-            </span>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-[1.05]">
-              LET'S CREATE <br> SOMETHING GREAT <br> TOGETHER.
-            </h2>
-            <p class="text-black/80 text-xs font-medium max-w-sm">
-              Have a project in mind? Drop a message below to get a quick response.
-            </p>
-          </div>
-
-          <!-- Right Side: Sleek Compact Form -->
-          <div class="lg:col-span-6">
-            <div class="bg-[#161616] border border-[#282828] p-5 sm:p-6 rounded-2xl shadow-2xl text-white">
-              <h3 class="text-base font-bold text-white mb-4">Let's work together</h3>
-              
-              <form onsubmit="handleFooterForm(event)" class="space-y-3">
-                <!-- Name & Email in 2 columns -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input 
-                    type="text" 
-                    id="clientName" 
-                    placeholder="Your name" 
-                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
-                    required
-                  >
-                  <input 
-                    type="email" 
-                    id="clientEmail" 
-                    placeholder="Your email" 
-                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
-                    required
-                  >
-                </div>
-
-                <!-- Select Service -->
-                <div>
-                  <select 
-                    id="clientService" 
-                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-gray-300 outline-none focus:border-brandLime transition cursor-pointer"
-                    required
-                  >
-                    <option value="" disabled selected>Select service...</option>
-                    <option value="Logo & Brand Identity">Logo & Brand Identity</option>
-                    <option value="Packaging Design">Packaging Design</option>
-                    <option value="Book Cover & Formatting">Book Cover & Formatting</option>
-                    <option value="Social Media Kit">Social Media Kit</option>
-                    <option value="Full Branding Package">Full Branding Package</option>
-                  </select>
-                </div>
-
-                <!-- Message Textarea -->
-                <div>
-                  <textarea 
-                    id="clientMessage" 
-                    rows="2" 
-                    placeholder="Tell me about your project" 
-                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition resize-none"
-                    required
-                  ></textarea>
-                </div>
-
-                <!-- Send Button -->
-                <button 
-                  type="submit" 
-                  class="w-full bg-white hover:bg-brandLime text-black font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer"
-                >
-                  Send message ↗
-                </button>
-              </form>
-            </div>
-          </div>
-
+        <!-- Left Side: Compact Title -->
+        <div class="lg:col-span-6 space-y-3">
+          <span class="text-[10px] uppercase font-extrabold tracking-widest bg-black text-brandLime px-3.5 py-1.5 rounded-full inline-block">
+            LET'S COLLABORATE
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-[1.05]">
+            LET'S CREATE <br> SOMETHING GREAT <br> TOGETHER.
+          </h2>
+          <p class="text-black/80 text-xs font-medium max-w-sm">
+            Have a project in mind? Drop a message below to get a quick response.
+          </p>
         </div>
+
+        <!-- Right Side: Sleek Compact Form -->
+        <div class="lg:col-span-6">
+          <div class="bg-[#161616] border border-[#282828] p-5 sm:p-6 rounded-2xl shadow-2xl text-white">
+            <h3 class="text-base font-bold text-white mb-4">Let's work together</h3>
+            
+            <form onsubmit="handleFooterForm(event)" class="space-y-3">
+              <!-- Name & Email in 2 columns -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input 
+                  type="text" 
+                  id="clientName" 
+                  placeholder="Your name" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                  required
+                >
+                <input 
+                  type="email" 
+                  id="clientEmail" 
+                  placeholder="Your email" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                  required
+                >
+              </div>
+
+              <!-- Select Service -->
+              <div>
+                <select 
+                  id="clientService" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-gray-300 outline-none focus:border-brandLime transition cursor-pointer"
+                  required
+                >
+                  <option value="" disabled selected>Select service...</option>
+                  <option value="Logo & Brand Identity">Logo & Brand Identity</option>
+                  <option value="Packaging Design">Packaging Design</option>
+                  <option value="Book Cover & Formatting">Book Cover & Formatting</option>
+                  <option value="Social Media Kit">Social Media Kit</option>
+                  <option value="Full Branding Package">Full Branding Package</option>
+                </select>
+              </div>
+
+              <!-- Message Textarea -->
+              <div>
+                <textarea 
+                  id="clientMessage" 
+                  rows="2" 
+                  placeholder="Tell me about your project" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Send Button -->
+              <button 
+                type="submit" 
+                class="w-full bg-white hover:bg-brandLime text-black font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer"
+              >
+                Send message ↗
+              </button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- JavaScript for Form to WhatsApp Submission -->
-    <script>
-      function handleFooterForm(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById('clientName').value.trim();
-        const email = document.getElementById('clientEmail').value.trim();
-        const service = document.getElementById('clientService').value;
-        const message = document.getElementById('clientMessage').value.trim();
+  <!-- JavaScript for Form to WhatsApp Submission -->
+  <script>
+    function handleFooterForm(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('clientName').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const service = document.getElementById('clientService').value;
+      const message = document.getElementById('clientMessage').value.trim();
 
-        const text = `Hello Nazrul,\n\nI want to work with you!\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n*Message:* ${message}`;
-        
-        const encodedText = encodeURIComponent(text);
-        const whatsappUrl = `https://wa.me/8801571149561?text=${encodedText}`;
-        
-        window.open(whatsappUrl, '_blank');
-      }
-    </script>
+      const text = `Hello Nazrul,\n\nI want to work with you!\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n*Message:* ${message}`;
+      
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/8801571149561?text=${encodedText}`;
+      
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
 
     <!-- 3-Column Footer Details -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-brandBorder pb-14 text-sm">
