@@ -1729,230 +1729,109 @@ images: [
 <!-- ==================== 11. FOOTER CTA & CONTACT ==================== -->
   <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     
-<!-- ========================================== -->
-<!-- COMPACT LET'S COLLABORATE & CONTACT SECTION -->
-<!-- ========================================== -->
+    <!-- Wide Slender Balanced CTA Banner (Extended & Low Height) -->
+    <div class="w-full mb-16">
+      <div class="bg-brandLime text-black rounded-[2.5rem] px-8 sm:px-14 py-8 sm:py-10 relative overflow-hidden shadow-[0_15px_50px_rgba(204,255,0,0.15)]">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Side: Compact Title -->
+          <div class="lg:col-span-6 space-y-3">
+            <span class="text-[10px] uppercase font-extrabold tracking-widest bg-black text-brandLime px-3.5 py-1.5 rounded-full inline-block">
+              LET'S COLLABORATE
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-[1.05]">
+              LET'S CREATE <br> SOMETHING GREAT <br> TOGETHER.
+            </h2>
+            <p class="text-black/80 text-xs font-medium max-w-sm">
+              Have a project in mind? Drop a message below to get a quick response.
+            </p>
+          </div>
 
-<style>
-/* CTA Section Main Container */
-.cta-section {
-    background-color: #121212;
-    padding: 50px 5%; /* প্যাডিং কমানো হয়েছে যাতে ছোট দেখায় */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Big Neon Green Box (Compact Size) */
-.cta-box {
-    background-color: #bcf300;
-    width: 100%;
-    max-width: 1100px; /* সাইজ কিছুটা ছোট করা হয়েছে */
-    border-radius: 24px;
-    padding: 45px 50px; /* ভিতরের স্পেস কমানো হয়েছে */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(188, 243, 0, 0.1);
-}
-
-/* Left Content Area */
-.cta-content {
-    max-width: 450px;
-}
-
-.cta-badge {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 6px 14px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.cta-title {
-    color: #000000;
-    font-size: 36px; /* ফন্ট সাইজ একটু ছোট ও প্রপার করা হয়েছে */
-    font-weight: 800;
-    line-height: 1.15;
-    text-transform: uppercase;
-    margin: 0;
-    font-family: inherit;
-}
-
-/* Right Side Form Wrapper (Compact Dark Box) */
-.cta-form-wrapper {
-    background-color: #181818;
-    width: 100%;
-    max-width: 400px; /* ফর্মের বক্স ছোট করা হয়েছে */
-    padding: 25px 30px; /* প্যাডিং কমানো হয়েছে */
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.cta-form-wrapper h3 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: inherit;
-}
-
-/* Form Inputs & Select & Textarea */
-.form-group {
-    margin-bottom: 12px; /* গ্যাপ কমানো হয়েছে */
-}
-
-.cta-form-wrapper input,
-.cta-form-wrapper select,
-.cta-form-wrapper textarea {
-    width: 100%;
-    background-color: #222222;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    padding: 11px 15px; /* ইনপুট হাইট ছোট করা হয়েছে */
-    color: #ffffff;
-    font-size: 13px;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.cta-form-wrapper input::placeholder,
-.cta-form-wrapper textarea::placeholder {
-    color: #777777;
-}
-
-.cta-form-wrapper select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 14px;
-    cursor: pointer;
-}
-
-.cta-form-wrapper select option {
-    background-color: #181818;
-    color: #ffffff;
-}
-
-.cta-form-wrapper input:focus,
-.cta-form-wrapper select:focus,
-.cta-form-wrapper textarea:focus {
-    border-color: #bcf300;
-}
-
-/* Submit Button */
-.submit-btn {
-    width: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-    font-family: inherit;
-}
-
-.submit-btn:hover {
-    background-color: #bcf300;
-    color: #000000;
-}
-
-.submit-btn svg {
-    transition: transform 0.3s ease;
-}
-
-.submit-btn:hover svg {
-    transform: translate(3px, -3px);
-}
-
-/* Responsive Design for Mobile & Tablet */
-@media (max-width: 992px) {
-    .cta-box {
-        flex-direction: column;
-        align-items: center;
-        padding: 35px 20px;
-    }
-    
-    .cta-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .cta-badge {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .cta-title {
-        font-size: 28px;
-    }
-
-    .cta-form-wrapper {
-        max-width: 100%;
-    }
-}
-</style>
-
-<!-- HTML Section Start -->
-<section class="cta-section" id="contact">
-    <div class="cta-box">
-        <!-- বাম পাশের টেক্সট কন্টেন্ট -->
-        <div class="cta-content">
-            <span class="cta-badge">LET'S COLLABORATE</span>
-            <h2 class="cta-title">LET'S CREATE SOMETHING GREAT TOGETHER.</h2>
-        </div>
-
-        <!-- ডান পাশের "Let's work together" ফর্ম বক্স (Direct Mail Enabled) -->
-        <div class="cta-form-wrapper">
-            <h3>Let's work together</h3>
-            <form action="mailto:nazrulislambadol17@gmail.com" method="POST" enctype="text/plain">
-                <div class="form-group">
-                    <input type="text" name="Name" placeholder="Your name" required>
+          <!-- Right Side: Sleek Compact Form -->
+          <div class="lg:col-span-6">
+            <div class="bg-[#161616] border border-[#282828] p-5 sm:p-6 rounded-2xl shadow-2xl text-white">
+              <h3 class="text-base font-bold text-white mb-4">Let's work together</h3>
+              
+              <form onsubmit="handleFooterForm(event)" class="space-y-3">
+                <!-- Name & Email in 2 columns -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <input 
+                    type="text" 
+                    id="clientName" 
+                    placeholder="Your name" 
+                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                    required
+                  >
+                  <input 
+                    type="email" 
+                    id="clientEmail" 
+                    placeholder="Your email" 
+                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                    required
+                  >
                 </div>
-                <div class="form-group">
-                    <input type="email" name="Email" placeholder="Your email" required>
+
+                <!-- Select Service -->
+                <div>
+                  <select 
+                    id="clientService" 
+                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-gray-300 outline-none focus:border-brandLime transition cursor-pointer"
+                    required
+                  >
+                    <option value="" disabled selected>Select service...</option>
+                    <option value="Logo & Brand Identity">Logo & Brand Identity</option>
+                    <option value="Packaging Design">Packaging Design</option>
+                    <option value="Book Cover & Formatting">Book Cover & Formatting</option>
+                    <option value="Social Media Kit">Social Media Kit</option>
+                    <option value="Full Branding Package">Full Branding Package</option>
+                  </select>
                 </div>
-                <div class="form-group">
-                    <select name="Service" required>
-                        <option value="" disabled selected>Select service...</option>
-                        <option value="Logo & Branding">Logo & Branding</option>
-                        <option value="Packaging Design">Packaging Design</option>
-                        <option value="Book Cover">Book Cover</option>
-                        <option value="Social Media Kit">Social Media Kit</option>
-                    </select>
+
+                <!-- Message Textarea -->
+                <div>
+                  <textarea 
+                    id="clientMessage" 
+                    rows="2" 
+                    placeholder="Tell me about your project" 
+                    class="w-full bg-[#202020] border border-[#333333] rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-gray-500 outline-none focus:border-brandLime transition resize-none"
+                    required
+                  ></textarea>
                 </div>
-                <div class="form-group">
-                    <textarea name="Project Details" placeholder="Tell me about your project" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">
-                    Send message 
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+
+                <!-- Send Button -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-white hover:bg-brandLime text-black font-extrabold text-xs uppercase tracking-wider py-3 rounded-xl transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                >
+                  Send message ↗
                 </button>
-            </form>
+              </form>
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
-</section>
-<!-- HTML Section End -->
+
+    <!-- JavaScript for Form to WhatsApp Submission -->
+    <script>
+      function handleFooterForm(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('clientName').value.trim();
+        const email = document.getElementById('clientEmail').value.trim();
+        const service = document.getElementById('clientService').value;
+        const message = document.getElementById('clientMessage').value.trim();
+
+        const text = `Hello Nazrul,\n\nI want to work with you!\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n*Message:* ${message}`;
+        
+        const encodedText = encodeURIComponent(text);
+        const whatsappUrl = `https://wa.me/8801571149561?text=${encodedText}`;
+        
+        window.open(whatsappUrl, '_blank');
+      }
+    </script>
 
     <!-- 3-Column Footer Details -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-brandBorder pb-14 text-sm">
