@@ -1726,242 +1726,103 @@ images: [
 
   </section>
 
-<!-- ==================== 11. FOOTER CTA & CONTACT ==================== -->
+<!-- ==================== 10. FOOTER CTA & CONTACT (FORM INTEGRATED) ==================== -->
   <footer id="contact" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     
-<!-- ========================================== -->
-<!-- COMPACT LET'S COLLABORATE & CONTACT SECTION -->
-<!-- ========================================== -->
-
-<style>
-/* CTA Section Main Container */
-.cta-section {
-    background-color: #121212;
-    padding: 50px 5%; /* প্যাডিং কমানো হয়েছে যাতে ছোট দেখায় */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Big Neon Green Box (Compact Size) */
-.cta-box {
-    background-color: #bcf300;
-    width: 100%;
-    max-width: 1100px; /* সাইজ কিছুটা ছোট করা হয়েছে */
-    border-radius: 24px;
-    padding: 45px 50px; /* ভিতরের স্পেস কমানো হয়েছে */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(188, 243, 0, 0.1);
-}
-
-/* Left Content Area */
-.cta-content {
-    max-width: 450px;
-}
-
-.cta-badge {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 6px 14px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.cta-title {
-    color: #000000;
-    font-size: 36px; /* ফন্ট সাইজ একটু ছোট ও প্রপার করা হয়েছে */
-    font-weight: 800;
-    line-height: 1.15;
-    text-transform: uppercase;
-    margin: 0;
-    font-family: inherit;
-}
-
-/* Right Side Form Wrapper (Compact Dark Box) */
-.cta-form-wrapper {
-    background-color: #181818;
-    width: 100%;
-    max-width: 400px; /* ফর্মের বক্স ছোট করা হয়েছে */
-    padding: 25px 30px; /* প্যাডিং কমানো হয়েছে */
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.cta-form-wrapper h3 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: inherit;
-}
-
-/* Form Inputs & Select & Textarea */
-.form-group {
-    margin-bottom: 12px; /* গ্যাপ কমানো হয়েছে */
-}
-
-.cta-form-wrapper input,
-.cta-form-wrapper select,
-.cta-form-wrapper textarea {
-    width: 100%;
-    background-color: #222222;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    padding: 11px 15px; /* ইনপুট হাইট ছোট করা হয়েছে */
-    color: #ffffff;
-    font-size: 13px;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.cta-form-wrapper input::placeholder,
-.cta-form-wrapper textarea::placeholder {
-    color: #777777;
-}
-
-.cta-form-wrapper select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 14px;
-    cursor: pointer;
-}
-
-.cta-form-wrapper select option {
-    background-color: #181818;
-    color: #ffffff;
-}
-
-.cta-form-wrapper input:focus,
-.cta-form-wrapper select:focus,
-.cta-form-wrapper textarea:focus {
-    border-color: #bcf300;
-}
-
-/* Submit Button */
-.submit-btn {
-    width: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-    font-family: inherit;
-}
-
-.submit-btn:hover {
-    background-color: #bcf300;
-    color: #000000;
-}
-
-.submit-btn svg {
-    transition: transform 0.3s ease;
-}
-
-.submit-btn:hover svg {
-    transform: translate(3px, -3px);
-}
-
-/* Responsive Design for Mobile & Tablet */
-@media (max-width: 992px) {
-    .cta-box {
-        flex-direction: column;
-        align-items: center;
-        padding: 35px 20px;
-    }
-    
-    .cta-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .cta-badge {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .cta-title {
-        font-size: 28px;
-    }
-
-    .cta-form-wrapper {
-        max-width: 100%;
-    }
-}
-</style>
-
-<!-- HTML Section Start -->
-<section class="cta-section" id="contact">
-    <div class="cta-box">
-        <!-- বাম পাশের টেক্সট কন্টেন্ট -->
-        <div class="cta-content">
-            <span class="cta-badge">LET'S COLLABORATE</span>
-            <h2 class="cta-title">LET'S CREATE SOMETHING GREAT TOGETHER.</h2>
+    <!-- Wide Sleek Banner with Form (Height Reduced & Extended Sides) -->
+    <div class="bg-brandLime text-black rounded-[2.5rem] p-8 sm:p-12 mb-16 relative overflow-hidden shadow-[0_15px_50px_rgba(204,255,0,0.15)]">
+      
+      <!-- Grid Layout for Left Text & Right Form -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Side: Big Text -->
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-[11px] uppercase font-extrabold tracking-widest bg-black text-brandLime px-3.5 py-1.5 rounded-full inline-block">
+            LET'S COLLABORATE
+          </span>
+          <h2 class="text-4xl sm:text-5xl font-black uppercase tracking-tight leading-[1.08]">
+            LET'S CREATE <br> SOMETHING GREAT <br> TOGETHER.
+          </h2>
+          <p class="text-black/80 text-xs sm:text-sm font-medium pt-1 max-w-md">
+            Have a project in mind? Fill out the form or reach out directly via WhatsApp to get a quick response.
+          </p>
         </div>
 
-        <!-- ডান পাশের "Let's work together" ফর্ম বক্স (Direct Mail Enabled) -->
-        <div class="cta-form-wrapper">
-            <h3>Let's work together</h3>
-            <form action="mailto:nazrulislambadol17@gmail.com" method="POST" enctype="text/plain">
-                <div class="form-group">
-                    <input type="text" name="Name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="Email" placeholder="Your email" required>
-                </div>
-                <div class="form-group">
-                    <select name="Service" required>
-                        <option value="" disabled selected>Select service...</option>
-                        <option value="Logo & Branding">Logo & Branding</option>
-                        <option value="Packaging Design">Packaging Design</option>
-                        <option value="Book Cover">Book Cover</option>
-                        <option value="Social Media Kit">Social Media Kit</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="Project Details" placeholder="Tell me about your project" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">
-                    Send message 
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+        <!-- Right Side: Contact Form (Dark Box matching reference) -->
+        <div class="lg:col-span-6">
+          <div class="bg-[#161616] border border-[#282828] p-6 sm:p-8 rounded-3xl shadow-2xl text-white">
+            <h3 class="text-lg font-bold text-white mb-5">Let's work together</h3>
+            
+            <form onsubmit="handleFooterForm(event)" class="space-y-4">
+              <!-- Name Input -->
+              <div>
+                <input 
+                  type="text" 
+                  id="clientName" 
+                  placeholder="Your name" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                  required
+                >
+              </div>
+
+              <!-- Email Input -->
+              <div>
+                <input 
+                  type="email" 
+                  id="clientEmail" 
+                  placeholder="Your email" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-500 outline-none focus:border-brandLime transition"
+                  required
+                >
+              </div>
+
+              <!-- Select Service Dropdown -->
+              <div>
+                <select 
+                  id="clientService" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-4 py-3 text-xs sm:text-sm text-gray-300 outline-none focus:border-brandLime transition cursor-pointer"
+                  required
+                >
+                  <option value="" disabled selected>Select service...</option>
+                  <option value="Logo & Brand Identity">Logo & Brand Identity</option>
+                  <option value="Packaging Design">Packaging Design</option>
+                  <option value="Book Cover & Formatting">Book Cover & Formatting</option>
+                  <option value="Social Media Kit">Social Media Kit</option>
+                  <option value="Full Branding Package">Full Branding Package</option>
+                </select>
+              </div>
+
+              <!-- Message Textarea -->
+              <div>
+                <textarea 
+                  id="clientMessage" 
+                  rows="3" 
+                  placeholder="Tell me about your project" 
+                  class="w-full bg-[#202020] border border-[#333333] rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-500 outline-none focus:border-brandLime transition resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Send Button -->
+              <button 
+                type="submit" 
+                class="w-full bg-white hover:bg-brandLime text-black font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl transition duration-300 flex items-center justify-center gap-2 shadow-lg"
+              >
+                Send message ↗
+              </button>
             </form>
+          </div>
         </div>
+
+      </div>
     </div>
-</section>
-<!-- HTML Section End -->
 
     <!-- 3-Column Footer Details -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-brandBorder pb-14 text-sm">
       
       <!-- Brand Bio (Col 1) -->
       <div class="md:col-span-4">
-        <div class="mb-4">
-        <img src="logoo.svg" alt="Logo" class="h-10 w-auto object-contain">
-      </div>
+        <div class="text-3xl font-black text-white mb-3">N<span class="text-brandLime">.</span></div>
         <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
           Crafting bold visual identities, packaging, and high-impact design assets for global startups and ambitious businesses.
         </p>
@@ -1990,7 +1851,6 @@ images: [
         <!-- International Timezone Reassurance Badge -->
         <div class="pt-2">
           <div class="inline-flex items-center gap-2.5 bg-[#181818] border border-brandBorder hover:border-brandLime/40 px-3.5 py-2 rounded-xl text-xs text-gray-300 transition">
-            <!-- Pulsing Active Dot -->
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandLime opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-brandLime"></span>
@@ -2026,164 +1886,21 @@ images: [
 
   </footer>
 
-  <!-- ==================== ★ 12. FLOATING AI CHAT WIDGET & POPUP ★ ==================== -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-    
-    <!-- CHAT POPUP WINDOW (Hidden by default, opens on click) -->
-    <div id="chatBoxModal" class="hidden mb-4 w-[330px] sm:w-[370px] bg-[#161616] border border-brandBorder rounded-3xl shadow-[0_15px_50px_rgba(0,0,0,0.8)] overflow-hidden transition-all duration-300">
-      
-      <!-- Chat Header -->
-      <div class="bg-[#1f1f1f] p-4 border-b border-brandBorder flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="relative w-10 h-10 rounded-full bg-emerald-950/80 border border-emerald-500/50 flex items-center justify-center text-emerald-400">
-            <!-- Bot Icon -->
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 01-6.23-.693L4.2 13.9"/></svg>
-            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-[#161616]"></span>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <h4 class="text-white font-bold text-sm">Nazrul Islam</h4>
-              <span class="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-extrabold px-1.5 py-0.2 rounded">AI Active</span>
-            </div>
-            <p class="text-[11px] text-gray-400">Typically replies instantly</p>
-          </div>
-        </div>
-        <!-- Close Button -->
-        <button onclick="toggleChatWidget()" class="text-gray-400 hover:text-white p-1 rounded-lg hover:bg-neutral-800 transition">
-          ✕
-        </button>
-      </div>
-
-      <!-- Chat Body / Messages Area -->
-      <div class="p-4 space-y-3.5 max-h-[320px] overflow-y-auto text-xs">
-        
-        <!-- Bot Initial Message -->
-        <div class="flex items-start gap-2.5">
-          <div class="w-7 h-7 rounded-full bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs flex-shrink-0">
-            🤖
-          </div>
-          <div class="bg-[#222222] border border-brandBorder p-3 rounded-2xl rounded-tl-none text-gray-200 space-y-1.5 leading-relaxed">
-            <p>👋 Hello! Welcome to my design portfolio.</p>
-            <p>How can I assist your brand today? You can choose a quick topic or send a direct quote request:</p>
-          </div>
-        </div>
-
-        <!-- Quick Action Prompt Chips -->
-        <div class="flex flex-wrap gap-1.5 pl-9">
-          <button onclick="setChatMessage('I need a new Logo & Brand Identity for my business.')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
-            ✨ Logo Design
-          </button>
-          <button onclick="setChatMessage('I need Packaging or Label design for my product.')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
-            📦 Packaging
-          </button>
-          <button onclick="setChatMessage('What are your design package prices and timeframe?')" class="bg-brandCard border border-brandBorder hover:border-brandLime text-gray-300 hover:text-brandLime px-2.5 py-1.5 rounded-lg text-[11px] transition">
-            💰 Pricing & Quote
-          </button>
-        </div>
-
-      </div>
-
-      <!-- Chat Input Form -->
-      <form onsubmit="handleSendChat(event)" class="p-3 bg-[#1a1a1a] border-t border-brandBorder flex items-center gap-2">
-        <input 
-          id="chatInputMessage" 
-          type="text" 
-          placeholder="Write your project details..." 
-          class="flex-1 bg-[#222222] border border-brandBorder text-white text-xs rounded-xl px-3.5 py-2.5 outline-none focus:border-brandLime transition placeholder-gray-500"
-          required
-        />
-        <button 
-          type="submit" 
-          class="bg-brandLime hover:bg-brandLimeHover text-black p-2.5 rounded-xl transition flex items-center justify-center"
-          title="Send via WhatsApp"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
-        </button>
-      </form>
-
-    </div>
-
-    <!-- TRIGGER PILL BUTTON (Matching the reference design exactly) -->
-    <div class="relative group cursor-pointer" onclick="toggleChatWidget()">
-      
-      <!-- Top-right Green Indicator Dot (Matching reference) -->
-      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-brandDark rounded-full z-10 pulse-glow"></span>
-
-      <!-- Main Pill Container -->
-      <div class="bg-[#181818]/95 backdrop-blur-md border border-brandBorder group-hover:border-brandLime/60 rounded-full py-2 px-3 sm:px-4 flex items-center gap-3 shadow-[0_10px_35px_rgba(0,0,0,0.7)] transition-all duration-300 transform group-hover:scale-[1.02]">
-        
-        <!-- Left Circular Bot Icon Badge with Green Dot -->
-        <div class="relative w-10 h-10 rounded-full bg-emerald-950/70 border border-emerald-500/40 flex items-center justify-center flex-shrink-0">
-          <!-- Robot Icon -->
-          <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-            <circle cx="12" cy="5" r="2"></circle>
-            <path d="M12 7v4"></path>
-            <line x1="8" y1="16" x2="8" y2="16"></line>
-            <line x1="16" y1="16" x2="16" y2="16"></line>
-          </svg>
-          <!-- Active Dot on Icon -->
-          <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 border-2 border-[#181818] rounded-full"></span>
-        </div>
-
-        <!-- Center Text Content -->
-        <div class="flex flex-col pr-1">
-          <div class="flex items-center gap-2">
-            <span class="text-white font-extrabold text-xs sm:text-sm tracking-tight whitespace-nowrap">
-              Chat with Nazrul
-            </span>
-            <!-- AI Active Badge -->
-            <span class="bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 text-[10px] font-extrabold px-1.5 py-0.5 rounded-md tracking-wide">
-              AI Active
-            </span>
-          </div>
-          <!-- Subtext -->
-          <span class="text-gray-400 text-[11px] font-medium leading-none mt-0.5">
-            24/7 Sales & Quotes
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- ==================== JAVASCRIPT FOR CHAT FUNCTIONALITY ==================== -->
+  <!-- JavaScript for Form to WhatsApp Submission -->
   <script>
-    // Toggle popup chat window
-    function toggleChatWidget() {
-      const modal = document.getElementById('chatBoxModal');
-      modal.classList.toggle('hidden');
-      if (!modal.classList.contains('hidden')) {
-        document.getElementById('chatInputMessage').focus();
-      }
-    }
-
-    // Set message into input box from chips
-    function setChatMessage(text) {
-      const input = document.getElementById('chatInputMessage');
-      input.value = text;
-      input.focus();
-    }
-
-    // Handle form submit -> Redirect to WhatsApp with the typed message
-    function handleSendChat(event) {
+    function handleFooterForm(event) {
       event.preventDefault();
-      const input = document.getElementById('chatInputMessage');
-      const message = input.value.trim();
-      if (!message) return;
+      
+      const name = document.getElementById('clientName').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const service = document.getElementById('clientService').value;
+      const message = document.getElementById('clientMessage').value.trim();
 
-      const phoneNumber = "8801571149561";
-      const encodedMsg = encodeURIComponent("Hello Nazrul,\n" + message);
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
-
-      // Open WhatsApp in new tab
+      const text = `Hello Nazrul,\n\nI want to work with you!\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n*Message:* ${message}`;
+      
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/8801571149561?text=${encodedText}`;
+      
       window.open(whatsappUrl, '_blank');
-      input.value = '';
-      toggleChatWidget();
     }
   </script>
-
-</body>
-</html>
